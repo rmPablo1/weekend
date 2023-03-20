@@ -1,1 +1,31 @@
 // Specific CSS for your home-page
+
+// explaination images
+.explaination-images {
+  display: table;
+  list-style: none;
+  padding: 0;
+}
+
+
+.home-image {
+  height: 100vh;
+  position: sticky;
+  top: O;
+}
+
+.flexbox {
+  display: flex;
+  margin: 10%;
+}
+
+.explaination-images p {
+  width: 45%;
+  height: 45%;
+  background-color: $blue;
+}
+
+.explaination-images i {
+  color: $orange;
+  margin: 10%;
+}
