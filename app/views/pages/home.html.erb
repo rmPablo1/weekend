@@ -1,2 +1,25 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<%# Block 2 %>
+<div class="flexbox">
+
+  <%# Column 1 %>
+  <div class="column-1">
+    <H1>More time with the people that matter</H1>
+
+    <p>We believe that the stress of making plans shouldn’t be a barrier to spending time with those that mean the most.  Get your community on board and easily sync calendars, send invites, and plan events and enjoy your weekend.</p>
+
+      <%# Explaination images %>
+      <div class="flexbox explaination-images">
+        <p> Import your calendar </p>
+        <i class="fa-solid fa-circle-right"></i>
+        <p> Choose friends you want to hangout with </p>
+        <i class="fa-solid fa-circle-right"></i>
+      </div>
+
+    <button class="button-56" role="button"> <%= link_to "Start making plans", @start_link %> </button>
+  </div>
+
+  <%# Column 2 %>
+  <img class="home-image" src="https://images.pexels.com/photos/6554665/pexels-photo-6554665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="img-responsive" alt="Friends gathering">
+
+</div>
