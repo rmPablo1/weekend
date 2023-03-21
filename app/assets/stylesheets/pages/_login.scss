@@ -1,0 +1,56 @@
+#login-photo {
+  height: 100vh;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 100px;
+  transform: translate(0, 0);
+}
+
+#signup-photo {
+  height: 100vh;
+  width: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 100px;
+  transform: translate(-100vw, 0);
+}
+
+#login-photos-transformed {
+  transform: translate(50vw, 0);
+}
+
+.login-signup {
+  display: flex;
+  flex-direction: row;
+}
+
+.login-form {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-form {
+  width: 50vw;
+  height: 100vh;
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.logo-login {
+  height: 100px;
+  width: auto;
+}
