@@ -9,7 +9,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
       t.string :full_name
       t.string :uid
       t.string :avatar_url
-      # t.string :provider    <- when called on a user this tells us how they logged in - currently not needed as only google implimented
+      t.string :provider
 
       ## Recoverable
       t.string   :reset_password_token
