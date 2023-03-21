@@ -22,12 +22,12 @@
     <% end %>
 
     <%= render "devise/shared/links" %>
-    <p class='signup-slider' data-controller='slider'>Don't have an account? <strong>Sign up!</strong></p>
+    <p class='signup-slider'>Don't have an account? <span data-controller='slider' data-action="click->slider#right"><strong>Sign up!</strong></span></p>
   </div>
   <div class="signup-form">
     <%= render "devise/registrations/new" %>
-    <p class='login-slider' data-controller='slider'>Already have an account? <strong>Login</strong></p>
-    <img id='login-photo' src='https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80'>
+    <p class='login-slider'>Already have an account? <span data-controller='slider'  data-action="click->slider#left"><strong>Login</strong></span></p>
+    <img id='login-photo' data-slider-target="login-photo" src='https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80'>
   </div>
-  <img id='signup-photo' src='https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80'>
+  <img id='signup-photo' data-slider-target="signup-photo" src='https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80'>
 </div>
