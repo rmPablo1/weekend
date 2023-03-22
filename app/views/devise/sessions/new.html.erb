@@ -1,33 +1,39 @@
 <div class="login-signup"  data-controller='slider'>
-  <div class="login-form">
-     <%= image_tag('logo.png', class:"logo-login")  %>
+  <div class="login-form-side">
+     <div class='login-form-box'>
+       <%= image_tag('logo.png', class:"logo-login")  %>
 
-    <h2>Your weekend starts here!</h2>
+           <h1>Your weekend starts here!</h1>
 
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
-      <div class="form-inputs">
-        <%= f.input :email,
-                    required: false,
-                    autofocus: true,
-                    input_html: { autocomplete: "email" } %>
-        <%= f.input :password,
-                    required: false,
-                    input_html: { autocomplete: "current-password" } %>
-        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-      </div>
-
-      <div class="form-actions">
-        <%= f.button :submit, "Log in" %>
-      </div>
-    <% end %>
-
-    <%= render "devise/shared/links" %>
-    <p class='signup-slider'>Don't have an account? <span data-action="click->slider#right"><strong>Sign up!</strong></span></p>
+           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+        <div class="form-inputs">
+          <div class='form-input'>
+            <%= f.input :email,
+                        required: false,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" } %>
+          </div>
+          <div class='form-input'>
+            <%= f.input :password,
+                        required: false,
+                        input_html: { autocomplete: "current-password" } %>
+          </div>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Log in" %>
+          <%= render "devise/shared/links"%>
+        </div>
+          <% end %>
+          <p class='signup-slider'>Don't have an account? <span data-action="click->slider#right" class="cursor-pointer"><strong>Sign up!</strong></span></p>
+     </div>
   </div>
-  <div class="signup-form">
-    <%= render "devise/registrations/new" %>
-    <p class='login-slider'>Already have an account? <span data-action="click->slider#left"><strong>Login</strong></span></p>
-    <img class='login-photo undraggable unselectable' data-slider-target="loginphoto" src='https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80'>
-  </div>
-  <img class='signup-photo undraggable unselectable' data-slider-target="signupphoto" src='https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80'>
+  <div class="signup-form-side">
+    <div class='signup-form-box'>
+      <%= render "devise/registrations/new" %>
+      <p class='login-slider'>Already have an account? <span data-action="click->slider#left" class="cursor-pointer"><strong>Login</strong></span></p>
+      <img class='login-photo undraggable unselectable' data-slider-target="loginphoto" src='https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80'>
+        </div>
+    </div>
+    <img class='signup-photo undraggable unselectable' data-slider-target="signupphoto" src='https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80'>
 </div>
