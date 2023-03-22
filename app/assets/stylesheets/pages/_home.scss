@@ -5,7 +5,7 @@
   justify-content: flex-start;
 }
 
-.images {
+.images-home {
   justify-content: flex-start;
   margin-bottom: 4vh;
 }
@@ -14,21 +14,29 @@
   width: 50%;
 }
 
-.pic {
 
-}
-
-.logo {
+.logo-home {
   height: auto;
   width: 10vw;
 }
 
-.pics {
+.picshome {
   width: 30vh;
   margin-right: 2vw;
 }
 
-.pic {
+
+
+.h1-home {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.phome {
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 4vh;
+  padding-right: 5vw;
+}
+.pic-home {
   width: 45vw;
   height: auto;
   position: sticky;
@@ -37,7 +45,7 @@
 
 }
 
-.flexbox {
+.flexbox-home {
   display: flex;
   justify-content: center;
   padding: 50px 50px 50px 50px;
