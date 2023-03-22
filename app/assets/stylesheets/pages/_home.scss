@@ -79,40 +79,51 @@ left: 40vw;
   display:flex;
   gap: 30px;
   img {
-    max-width: 10vw;
-    max-height: auto;
-    box-shadow: 5px 5px black;
+    width: 13vw;
+    height: auto;
+    box-shadow: 10px 10px black;
+    border: #292F36 solid 5px;
     border-radius: 7px;
     background-color: rgb(243, 243, 243);
   }
 }
 
 .homepage-left {
-  padding-left:40px;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
   align-items: flex-start;
-  width: 40vw;
+  width: 35vw;
   height: 100vh;
+  background-color: #10B1C5;
+  border-right: black solid 4px
 }
 
 .homepage-right {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60vw;
+  width: 65vw;
   height: 100vh;
+  background-color: #ff5555;
+  border-left: black solid 4px
 }
 
 .pic-home {
-  width: 90%;
+  width: 80%;
   height: auto;
   border-radius: 20px;
   box-shadow: 20px 20px rgba(0, 0, 0, 0.836);
+  transition: width 0.5s ease;
+}
+
+.pic-home:hover {
+  width: 90%;
 }
 
 .letsgo-button {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 800;
   height: 10vh;
   font-family: 'Nunito', sans-serif;
@@ -121,8 +132,61 @@ left: 40vw;
     color: rgb(243, 243, 243);
   }
   transition: box-shadow 0.3s ease;
+  background-color: #ff5555;
+  border: black solid 4px;
+  margin-top: 20px;
 }
 
 .letsgo-button:hover {
   box-shadow: 0px 0px black;
+}
+
+.h1-home {
+  font-weight: 800;
+  font-size: 60px;
+  color: #1f2225;
+  padding: 0;
+  margin-top: 0px;
+}
+
+.typed-text {
+  color: #ff5555;
+  text-shadow: 1px 1px 0 #000,
+  -2px 2px 0 #1f2225,
+  2px -2px 0 #1f2225,
+  -2px -2px 0 #1f2225,
+  0px 2px 0 #1f2225,
+  0px -2px 0 #1f2225,
+  -2px 0px 0 #1f2225,
+  2px 0px 0 #1f2225,
+  3px 3px 0 #1f2225,
+  -3px 3px 0 #1f2225,
+  3px -3px 0 #1f2225,
+  -3px -3px 0 #1f2225,
+  0px 3px 0 #1f2225,
+  0px -3px 0 #1f2225,
+  -3px 0px 0 #1f2225,
+  3px 0px 0 #1f2225,
+  2px 3px 0 #1f2225,
+  -2px 3px 0 #1f2225,
+  2px -3px 0 #1f2225,
+  -2px -3px 0 #1f2225,
+  3px 2px 0 #1f2225,
+  -3px 2px 0 #1f2225,
+  3px -2px 0 #1f2225,
+  -3px -2px 0 #1f2225;
+}
+
+.logo-home {
+  width: 120px;
+  height: auto;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.phome {
+  font-weight: 700;
+  font-size: 24px;
+  color: #292F36;
+  margin-top: -40px;
 }

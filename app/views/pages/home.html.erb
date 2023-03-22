@@ -1,7 +1,7 @@
 <div class='homepage'>
   <div class='homepage-left'>
-    <%= image_tag "WE1.png", class: "logo-home" %>
-    <h1 class="h1-home">More time with the people that matter</h1>
+    <%= image_tag "logo.png", class: "logo-home" %>
+    <h1 class="h1-home">Plan your <span data-controller="typed-js" class='typed-text'></h1>
     <p class="phome">We believe that the stress of making plans shouldn’t be a barrier to spending time with those that mean the most.  Get your community on board and easily sync calendars, send invites, and plan events and enjoy your weekend.</p>
     <div class="images-home">
       <%= image_tag "1.png", class: "picshome" %>
@@ -12,7 +12,7 @@
   <div class='homepage-right'>
     <%= image_tag "rave", class: "pic-home" %>
   </div>
-  <div class="google-api-buttons">
+  <div class="google-api-buttons" hidden>
     <p>Google Calendar API Quickstart</p>
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize_button" onclick="handleAuthClick()">Sync</button>
