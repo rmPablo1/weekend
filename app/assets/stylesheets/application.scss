@@ -6,13 +6,28 @@
 // External libraries
 // @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
+@import "simple_calendar";
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
 @import 'pages/login';
-@import "simple_calendar";
 
 body {
-  margin: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 0;
+  min-height: 100vh;
+  font-family: $body-font;
+  background-color: rgb(233, 242, 246);
+}
+
+a {
+  text-decoration: none;
+  color: $pink;
+  font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $headers-font;
 }
