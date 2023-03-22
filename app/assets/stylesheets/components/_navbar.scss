@@ -1,12 +1,59 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+/* Style the links inside the sidenav */
+#mySidenav #navblock {
+  position: absolute;
+  left: -120px;
+  top: -780px;
+  height: 100vh;
+  transition: 0.4s;
+  padding: 15px;
+  width: 150px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  align-items: center;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.fa-solid {
+  margin-bottom: 50px;
+  color: white;
+  
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+#mySidenav #navblock:hover {
+  left: 0;
+  top: 0;
+}
+
+.center-buttons {
+  display: flex;
+}
+
+#navblock {
+  top: 20px;
+  background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.navtext {
+  margin-top: 15vh;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 10vh;
+}
+
+.navlogo {
+  width: 8vw;
+  margin-top: 2vh;
+
 }
