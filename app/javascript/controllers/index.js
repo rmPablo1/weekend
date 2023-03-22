@@ -9,3 +9,5 @@ application.register("hello", HelloController)
 
 import SyncController from "./sync_controller"
 application.register("sync", SyncController)
+import SliderController from "./slider_controller"
+application.register("slider", SliderController)
