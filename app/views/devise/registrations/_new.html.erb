@@ -1,6 +1,6 @@
-<h1>We're excited to have you join us!</h1>
+<h1  class="form-header">join us!</h1>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }, html: { class: "signup-form" }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
