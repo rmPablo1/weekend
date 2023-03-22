@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_21_113620) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_22_034842) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_21_113620) do
     t.datetime "updated_at", null: false
     t.index ["receiver_id"], name: "index_contacts_on_receiver_id"
     t.index ["sender_id"], name: "index_contacts_on_sender_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "summary"
+    t.string "google_event_id"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -42,4 +53,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_21_113620) do
 
   add_foreign_key "contacts", "users", column: "receiver_id"
   add_foreign_key "contacts", "users", column: "sender_id"
+  add_foreign_key "events", "users"
 end
