@@ -1,32 +1,41 @@
-#login-photo {
+@import "../components/user_forms";
+
+.login-photo {
   height: 100vh;
   width: auto;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 2;
   border-radius: 100px;
   transform: translate(0, 0);
+  transition: transform 1.3s ease;
 }
 
-#signup-photo {
+.signup-photo {
   height: 100vh;
   width: auto;
   position: absolute;
   top: 0;
   right: 0;
-  z-index: -1;
+  z-index: 2;
   border-radius: 100px;
   transform: translate(-100vw, 0);
+  transition: transform 1.3s ease;
 }
 
-#login-photos-transformed {
+.login-photo-transformed {
   transform: translate(50vw, 0);
+}
+
+.signup-photo-transformed {
+  transform: translate(-50vw, 0);
 }
 
 .login-signup {
   display: flex;
   flex-direction: row;
+  background-color: #10b0c5a6;
 }
 
 .login-form {
@@ -51,6 +60,24 @@
 
 
 .logo-login {
-  height: 100px;
-  width: auto;
+  height: auto;
+  width: 10vw;
+}
+
+.undraggable {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
