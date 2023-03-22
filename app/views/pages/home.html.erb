@@ -38,8 +38,7 @@
 <p>Google Calendar API Quickstart</p>
 
 <!--Add buttons to initiate auth sequence and sign out-->
-<button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
-<button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+<button id="authorize_button" onclick="handleAuthClick()">Sync</button>
 
 <pre id="content" style="white-space: pre-wrap;"></pre>
 
@@ -59,14 +58,11 @@ const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/
 
 // Authorization scopes required by the API; multiple scopes can be
 // included, separated by spaces.
-const SCOPES = 'https://www.googleapis.com/auth/calendar.readonly';
+const SCOPES = 'https://www.googleapis.com/auth/calendar';
 
 let tokenClient;
 let gapiInited = false;
 let gisInited = false;
-
-document.getElementById('authorize_button').style.visibility = 'hidden';
-document.getElementById('signout_button').style.visibility = 'hidden';
 
 /**
  * Callback after api.js is loaded.
@@ -118,8 +114,6 @@ tokenClient.callback = async (resp) => {
   if (resp.error !== undefined) {
     throw (resp);
   }
-  document.getElementById('signout_button').style.visibility = 'visible';
-  document.getElementById('authorize_button').innerText = 'Refresh';
   await listUpcomingEvents();
 };
 
@@ -164,6 +158,7 @@ try {
     'orderBy': 'startTime',
   };
   response = await gapi.client.calendar.events.list(request);
+  console.log(response)
 } catch (err) {
   document.getElementById('content').innerText = err.message;
   return;
@@ -176,9 +171,11 @@ if (!events || events.length == 0) {
 }
 // Flatten to string to display
 const output = events.reduce(
-    (str, event) => `${str}${event.summary} (${event.start.dateTime || event.start.date})\n`,
+    (str, event) => `${str}${event.summary} (${event.start.dateTime || event.start.date}) (${event.end.dateTime}\n`,
     'Events:\n');
 document.getElementById('content').innerText = output;
+
+events.insert("primary")
 }
 </script>
 <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
