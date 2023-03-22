@@ -1,0 +1,16 @@
+.orange {
+  background-color: $orange;
+}
+
+.calendar-sub-heading {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container {
+  width: 800px;
+}
+
+.simple-calendar .next-month {
+  background: $orange;  // doesn't work, would like to update simple calendar css but how?
+}

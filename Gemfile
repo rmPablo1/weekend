@@ -82,3 +82,6 @@ end
 gem "omniauth"
 gem "omniauth-google-oauth2"
 gem "omniauth-rails_csrf_protection"
+
+# gem for Simple Calendar
+gem "simple_calendar", "~> 2.4"
