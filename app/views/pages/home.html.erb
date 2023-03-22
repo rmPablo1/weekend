@@ -1,25 +1,185 @@
-
+<% if current_user %>
+  <h2><%= current_user.email %></h2>
+  <% if current_user.avatar_url %>
+    <%= image_tag(current_user.avatar_url) %>
+  <% end %>
+    <%= link_to "Edit Account", edit_user_registration_path %>
+    <%= button_to "Logout", destroy_user_session_path, data: {turbo: "false"}, method: :delete %>
+  <% else %>
+    <%= link_to "Login", new_user_session_path %>
+  <% end %>
 <%# Block 2 %>
 <div class="flexbox">
 
   <%# Column 1 %>
   <div class="column-1">
-    <H1>More time with the people that matter</H1>
+
+    <%= image_tag "WE1.png", class: "logo" %>
+    <h1>More time with the people that matter</h1>
 
     <p>We believe that the stress of making plans shouldn’t be a barrier to spending time with those that mean the most.  Get your community on board and easily sync calendars, send invites, and plan events and enjoy your weekend.</p>
 
       <%# Explaination images %>
-      <div class="flexbox explaination-images">
-        <p> Import your calendar </p>
-        <i class="fa-solid fa-circle-right"></i>
-        <p> Choose friends you want to hangout with </p>
-        <i class="fa-solid fa-circle-right"></i>
+      <div class="images">
+        <%= image_tag "1.png", class: "pics" %>
+        <%= image_tag "2.png", class: "pics" %>
+
       </div>
 
     <button class="button-56" role="button"> <%= link_to "Start making plans", @start_link %> </button>
   </div>
 
   <%# Column 2 %>
-  <img class="home-image" src="https://images.pexels.com/photos/6554665/pexels-photo-6554665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="img-responsive" alt="Friends gathering">
+  <%= image_tag "Home.avif", class: "pic" %>
+
 
 </div>
+
+<p>Google Calendar API Quickstart</p>
+
+<!--Add buttons to initiate auth sequence and sign out-->
+<button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+<button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+
+<pre id="content" style="white-space: pre-wrap;"></pre>
+
+<script type="text/javascript">
+/* exported gapiLoaded */
+/* exported gisLoaded */
+/* exported handleAuthClick */
+/* exported handleSignoutClick */
+
+// TODO(developer): Set to client ID and API key from the Developer Console
+
+const CLIENT_ID = "<%= ENV['GOOGLE_OAUTH_CLIENT_ID'] %>" ;
+const API_KEY = "<%= ENV['GOOGLE_API_KEY'] %>";
+
+// Discovery doc URL for APIs used by the quickstart
+const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
+
+// Authorization scopes required by the API; multiple scopes can be
+// included, separated by spaces.
+const SCOPES = 'https://www.googleapis.com/auth/calendar.readonly';
+
+let tokenClient;
+let gapiInited = false;
+let gisInited = false;
+
+document.getElementById('authorize_button').style.visibility = 'hidden';
+document.getElementById('signout_button').style.visibility = 'hidden';
+
+/**
+ * Callback after api.js is loaded.
+ */
+function gapiLoaded() {
+gapi.load('client', initializeGapiClient);
+}
+
+/**
+ * Callback after the API client is loaded. Loads the
+ * discovery doc to initialize the API.
+ */
+async function initializeGapiClient() {
+await gapi.client.init({
+  apiKey: API_KEY,
+  discoveryDocs: [DISCOVERY_DOC],
+});
+gapiInited = true;
+maybeEnableButtons();
+}
+
+/**
+ * Callback after Google Identity Services are loaded.
+ */
+function gisLoaded() {
+tokenClient = google.accounts.oauth2.initTokenClient({
+  client_id: CLIENT_ID,
+  scope: SCOPES,
+  callback: '', // defined later
+});
+gisInited = true;
+maybeEnableButtons();
+}
+
+/**
+ * Enables user interaction after all libraries are loaded.
+ */
+function maybeEnableButtons() {
+if (gapiInited && gisInited) {
+  document.getElementById('authorize_button').style.visibility = 'visible';
+}
+}
+
+/**
+ *  Sign in the user upon button click.
+ */
+function handleAuthClick() {
+tokenClient.callback = async (resp) => {
+  if (resp.error !== undefined) {
+    throw (resp);
+  }
+  document.getElementById('signout_button').style.visibility = 'visible';
+  document.getElementById('authorize_button').innerText = 'Refresh';
+  await listUpcomingEvents();
+};
+
+if (gapi.client.getToken() === null) {
+  // Prompt the user to select a Google Account and ask for consent to share their data
+  // when establishing a new session.
+  tokenClient.requestAccessToken({prompt: 'consent'});
+} else {
+  // Skip display of account chooser and consent dialog for an existing session.
+  tokenClient.requestAccessToken({prompt: ''});
+}
+}
+
+/**
+ *  Sign out the user upon button click.
+ */
+function handleSignoutClick() {
+const token = gapi.client.getToken();
+if (token !== null) {
+  google.accounts.oauth2.revoke(token.access_token);
+  gapi.client.setToken('');
+  document.getElementById('content').innerText = '';
+  document.getElementById('authorize_button').innerText = 'Authorize';
+  document.getElementById('signout_button').style.visibility = 'hidden';
+}
+}
+
+/**
+ * Print the summary and start datetime/date of the next ten events in
+ * the authorized user's calendar. If no events are found an
+ * appropriate message is printed.
+ */
+async function listUpcomingEvents() {
+let response;
+try {
+  const request = {
+    'calendarId': 'primary',
+    'timeMin': (new Date()).toISOString(),
+    'showDeleted': false,
+    'singleEvents': true,
+    'maxResults': 100,
+    'orderBy': 'startTime',
+  };
+  response = await gapi.client.calendar.events.list(request);
+} catch (err) {
+  document.getElementById('content').innerText = err.message;
+  return;
+}
+
+const events = response.result.items;
+if (!events || events.length == 0) {
+  document.getElementById('content').innerText = 'No events found.';
+  return;
+}
+// Flatten to string to display
+const output = events.reduce(
+    (str, event) => `${str}${event.summary} (${event.start.dateTime || event.start.date})\n`,
+    'Events:\n');
+document.getElementById('content').innerText = output;
+}
+</script>
+<script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+<script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>

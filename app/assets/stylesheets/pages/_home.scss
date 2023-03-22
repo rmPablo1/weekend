@@ -2,27 +2,63 @@
 
 // explaination images
 .explaination-images {
-  display: table;
-  list-style: none;
-  padding: 0;
+  justify-content: flex-start;
+}
+
+.images {
+  justify-content: flex-start;
+  margin-bottom: 4vh;
+}
+
+.column-1 {
+  width: 50%;
+}
+
+.pic {
+
+}
+
+.logo {
+  height: auto;
+  width: 10vw;
+}
+
+.pics {
+  width: 30vh;
+  margin-right: 2vw;
 }
 
 
-.home-image {
-  height: 100vh;
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 4vh;
+  padding-right: 5vw;
+}
+.pic {
+  width: 45vw;
+  height: auto;
   position: sticky;
   top: O;
+  border-radius: 10px;
+
 }
 
 .flexbox {
   display: flex;
-  margin: 10%;
+  justify-content: center;
+  padding: 50px 50px 50px 50px;
+
 }
 
 .explaination-images p {
   width: 45%;
   height: 45%;
   background-color: $blue;
+  border-radius: 10px;
 }
 
 .explaination-images i {
