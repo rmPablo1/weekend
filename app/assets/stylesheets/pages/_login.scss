@@ -6,8 +6,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
-  border-radius: 100px;
+  z-index: 5;
+  border-radius: 70px;
   transform: translate(0, 0);
   transition: transform 1.3s ease;
 }
@@ -18,8 +18,8 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 2;
-  border-radius: 100px;
+  z-index: 5;
+  border-radius: 70px;
   transform: translate(-100vw, 0);
   transition: transform 1.3s ease;
 }
@@ -35,10 +35,10 @@
 .login-signup {
   display: flex;
   flex-direction: row;
-  background-color: #10b0c5a6;
+  background-color: #ffa52685;
 }
 
-.login-form {
+.login-form-side {
   width: 50vw;
   height: 100vh;
   display: flex;
@@ -47,7 +47,7 @@
   align-items: center;
 }
 
-.signup-form {
+.signup-form-side {
   width: 50vw;
   height: 100vh;
   position:relative;
