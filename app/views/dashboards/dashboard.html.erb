@@ -1,3 +1,4 @@
+<%= render "/shared/navbar" %>
 <%= month_calendar(events: @events) do |date, events| %>
   <%= date.strftime("%d") %>
 

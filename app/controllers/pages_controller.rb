@@ -4,7 +4,10 @@ class PagesController < ApplicationController
 
 
   def home
-    @start_link = user_signed_in? ? root_path : new_user_session_path
+    if user_signed_in?
+      redirect_to dashboard_path
+    end
+    @start_link = user_signed_in? ? dashboard_path : new_user_session_path
   end
 
   def create_events
