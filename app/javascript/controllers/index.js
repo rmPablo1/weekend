@@ -10,6 +10,9 @@ application.register("hello", HelloController)
 import NavbarSliderController from "./navbar_slider_controller"
 application.register("navbar-slider", NavbarSliderController)
 
+import InsertInCalendarController from "./insert_in_calendar_controller"
+application.register("insert-in-calendar", InsertInCalendarController)
+
 import SliderController from "./slider_controller"
 application.register("slider", SliderController)
 
