@@ -7,6 +7,9 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import InsertInCalendarController from "./insert_in_calendar_controller"
+application.register("insert-in-calendar", InsertInCalendarController)
+
 import SliderController from "./slider_controller"
 application.register("slider", SliderController)
 
