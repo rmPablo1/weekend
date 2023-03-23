@@ -11,3 +11,6 @@ astrid.save!
 
 event = Event.new(google_event_id: "akwjdwjakdajkwh", start_time: Time.now, end_time: Date.today+1, user: User.last, summary: "test_event")
 event.save!
+
+otheruser = Event.new(google_event_id: "akwjdwjakdajkwh", start_time: Time.now, end_time: Date.today+1, user: User.last, summary: "test_event")
+event.save!
