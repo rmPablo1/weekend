@@ -7,7 +7,11 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import SyncController from "./sync_controller"
-application.register("sync", SyncController)
 import SliderController from "./slider_controller"
 application.register("slider", SliderController)
+
+import SyncController from "./sync_controller"
+application.register("sync", SyncController)
+
+import TypedJsController from "./typed_js_controller"
+application.register("typed-js", TypedJsController)
