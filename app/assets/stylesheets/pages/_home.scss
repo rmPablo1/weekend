@@ -65,12 +65,6 @@
 //   margin: 10%;
 // }
 
-.google-api-buttons {
-position: absolute;
-top: 30vh;
-left: 40vw;
-}
-
 .homepage {
   display:flex;
 }
@@ -120,25 +114,6 @@ left: 40vw;
 
 .pic-home:hover {
   width: 90%;
-}
-
-.letsgo-button {
-  font-size: 40px;
-  font-weight: 800;
-  height: 10vh;
-  font-family: 'Nunito', sans-serif;
-  box-shadow: 8px 8px black;
-  a {
-    color: rgb(243, 243, 243);
-  }
-  transition: box-shadow 0.3s ease;
-  background-color: #ff5555;
-  border: black solid 4px;
-  margin-top: 20px;
-}
-
-.letsgo-button:hover {
-  box-shadow: 0px 0px black;
 }
 
 .h1-home {

@@ -7,6 +7,9 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import NavbarSliderController from "./navbar_slider_controller"
+application.register("navbar-slider", NavbarSliderController)
+
 import SliderController from "./slider_controller"
 application.register("slider", SliderController)
 
