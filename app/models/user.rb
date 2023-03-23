@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :contacts_as_sender, class_name: "Contact", foreign_key: :sender_id
   has_many :contacts_as_receiver, class_name: "Contact", foreign_key: :receiver_id
+  has_many :events
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:google_oauth2]
