@@ -17,7 +17,8 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: $body-font;
-  background-color: rgb(233, 242, 246);
+  // background-color: rgb(233, 242, 246);
+  background-color: #ffc46bce;
 }
 
 a {
@@ -27,28 +28,13 @@ a {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: $headers-font;
-}
-
-h1 {
   font-family: 'Nunito', sans-serif;
   padding: 0;
 }
 
-h2 {
-  font-family: 'Nunito', sans-serif;
-}
-
-h3 {
-  font-family: 'Nunito', sans-serif;
-}
-
-p {
+p, label {
   font-family: 'PT Sans', sans-serif;
-}
-
-label {
-  font-family: 'PT Sans', sans-serif;
+  padding: 0;
 }
 
 a {
@@ -59,4 +45,8 @@ a {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.no-margin {
+  margin: 0;
 }
