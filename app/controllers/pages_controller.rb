@@ -12,7 +12,6 @@ class PagesController < ApplicationController
 
   def create_events
     puts "printing the params!!!!"
-    events = Event.where(user: current_user)
 
     params[:result][:items].each do |event|
       puts event
