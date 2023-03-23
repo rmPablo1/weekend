@@ -19,6 +19,7 @@ lloyd.save!
 astrid = User.new(email: "astridchazaux@hotmail.fr", full_name: "Astrid Chazaux", password: "astridchazaux@hotmail.fr")
 astrid.save!
 
+
 astridevent = Event.new(google_event_id: "akwjdwjakdajkwh", start_time: Time.now, end_time: Date.today+1, user: User.last, summary: "test_event")
 astridevent.save!
 
@@ -42,3 +43,4 @@ astridfriendpablo.save!
 
 tomfriendpablo = Contact.new(sender: tom, receiver: pablo, status: 1)
 tomfriendpablo.save!
+
