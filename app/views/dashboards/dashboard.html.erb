@@ -3,7 +3,7 @@
 
   <% events.each do |event| %>
     <div>
-      <div class="event"><%= event.summary %></div>
+      <div class="event"><%= event.user.full_name %></div>
     </div>
   <% end %>
 <% end %>

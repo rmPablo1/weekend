@@ -2,7 +2,7 @@
   <div id="navblock">
     <%= image_tag "WE1.png", class: "navlogo" %>
 
-    <p class="navtext">Hi ___ we hope you are having a good day!</p>
+    <p class="navtext">Hi <%= current_user.full_name if user_signed_in? %> we hope you are having a good day!</p>
     <div class=menu-items>
       <a href=""><i class="fa-solid fa-calendar-days"></i></a>
       <a href=""><i class="fa-solid fa-people-group"></i></a>
