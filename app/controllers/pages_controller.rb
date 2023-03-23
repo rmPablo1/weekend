@@ -14,7 +14,8 @@ class PagesController < ApplicationController
     puts "printing the params!!!!"
 
     params[:result][:items].each do |event|
-      puts event
+      puts "here is the start date"
+      puts event[:start]
       puts "----------------------------------------"
       store_event = Event.new(summary: event[:summary], google_event_id: event[:id], start_time: event[:start].values.first, end_time: event[:end].values.first, user: current_user)
       unless Event.where(google_event_id: event[:id]).exists?
