@@ -6,10 +6,12 @@
       <%= link_to t('simple_calendar.next', default: '>'), calendar.url_for_next_view %></h1>
       <p class='no-margin calendar-popup-text'>You haven't seen <span style="font-weight:1000" class='cursor-pointer'>Trevor</span> in a while!</p>
     </div>
+
     <div class="flexbox calendar-heading-right" data-controller="popup" >
       <button class="dashboard-button-select" role="button" style="background-color=$orange" data-action="click->popup#open"> Select Friends </button>
       <button class="dashboard-button-create" role="button"> <a href="https://www.ecosia.org/search?q=test&addon=chrome&addonversion=5.1.3&method=topbar">Create event!</a> </button>
       <div data-popup-target="box" class="d-none popupcontainer" ><%= render "/simple_calendar/select_friends_form" %></div>
+
     </div>
   </div>
   <table class="table table-striped">
