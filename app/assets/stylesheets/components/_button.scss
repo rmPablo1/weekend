@@ -1,5 +1,5 @@
 
-.button-56, button {
+button {
   align-items: center;
   background-color: $pink;
   border: 2px solid #111;
@@ -24,7 +24,7 @@
   touch-action: manipulation;
 }
 
-.button-56:after, button:after {
+button:after {
   background-color: #111;
   border-radius: 8px;
   content: "";
@@ -97,8 +97,32 @@
   box-shadow: 0px 0px black;
 }
 
+.checkfriends {
+  font-size: 16px;
+}
 
 .letsgo-button {
+  font-size: 40px;
+  font-weight: 800;
+  height: 10vh;
+  font-family: 'Nunito', sans-serif;
+  box-shadow: 8px 8px black;
+  a {
+    color: rgb(243, 243, 243);
+  }
+  transition: box-shadow 0.3s ease;
+  background-color: #ff5555;
+  border: black solid 4px;
+  margin-top: 20px;
+}
+
+
+.letsgo-button:hover, .dashboard-button-select:hover, .dashboard-button-create:hover, .button:hover {
+  box-shadow: 0px 0px black;
+}
+
+
+.button {
   font-size: 40px;
   font-weight: 800;
   height: 10vh;

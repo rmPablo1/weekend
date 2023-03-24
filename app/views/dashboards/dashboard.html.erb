@@ -1,15 +1,14 @@
-<div class='dashboard-all' data-controller='navbar-slider'>
+<div class='dashboard-all' data-controller='navbar-slider popover'>
   <div class="dashboard-main-body" data-navbar-slider-target="mainbody">
-    <p class='test-button' data-action="click->navbar-slider#open">open</p>
+    <p class='open-icon cursor-pointer hidden' data-action="click->navbar-slider#open" data-navbar-slider-target="close">&#187;</p>
     <%= month_calendar(events: @events) do |date, events| %>
       <%= date.strftime("%d") %>
       <% events.each do |event| %>
         <div>
-          <div class="event"><p><%= event.user.full_name %> <i class="fa-solid fa-clock"></i>
-            <%= event.start_time.strftime('%H') %>-<%= event.end_time.strftime('%H') %>
-            </p>
+          <div class="event">
+            <div class='event-username'><%= event.user.full_name %></div>
+            <div class='event-times'><i class="fa-solid fa-clock"></i> <%= event.start_time.strftime('%H') %>-<%= event.end_time.strftime('%H') %></div>
           </div>
-
         </div>
       <% end %>
     <% end %>
@@ -17,25 +16,42 @@
 
   </div>
   <div class="dashboard-navbar" data-navbar-slider-target="navbar">
-  <%= image_tag("logo.png") %>
+  <p class="close-icon cursor-pointer" data-action="click->navbar-slider#close">x</p>
+      <%= image_tag("logo.png",  :class => "logo-navbar") %>
     <% if current_user %>
-      <h2><%= current_user.email %></h2>
       <% if current_user.avatar_url %>
-        <%= image_tag(current_user.avatar_url) %>
       <% end %>
-        <%= link_to "Edit Account", edit_user_registration_path %>
-        <%= button_to "Logout", destroy_user_session_path, data: {turbo: "false"}, method: :delete %>
+      <h2 class="navbar-welcome"><span class="welcome">Welcome</span> <%= current_user.email.match(/[^@]+/) %>!</h2>
+        <!-- <%= image_tag(current_user.avatar_url, :class => "user-avatar") %> -->
+        <div class="google-api-buttons">
+      <!--Add buttons to initiate auth sequence and sign out-->
+      <button id="authorize_button" onclick="handleAuthClick()" class="navbutton button orange">Sync</button>
+
+    </div>
+        <%= button_to "My Account", edit_user_registration_path, class: "navbutton button"%>
+        <%= button_to "My Groups", edit_user_registration_path, class: "navbutton button" %>
+        <%= button_to "My Friends", edit_user_registration_path, class: "navbutton button" %>
+        <%= button_to "Logout", destroy_user_session_path, data: {turbo: "false"}, method: :delete, class: "navbutton button logout-button" %>
       <% else %>
         <%= link_to "Login", new_user_session_path %>
       <% end %>
-    <div class="google-api-buttons">
-      <p>Google Calendar API Quickstart</p>
-      <!--Add buttons to initiate auth sequence and sign out-->
-      <button id="authorize_button" onclick="handleAuthClick()">Sync</button>
-    </div>
-    <p class="test" data-action="click->navbar-slider#close">close</p>
+
   </div>
 </div>
+
+<div hidden>
+  <form action="<%= dashboard_path %>" method="get">
+      <% @friends.each do |friend| %>
+        <input
+          type="checkbox"
+          name="friends[<%= friend.receiver.id %>]"/>
+        <label for="friends[<%= friend.receiver.id %>]" <%= friend.receiver.full_name %>> <%= friend.receiver.full_name%></label>
+      <% end %>
+
+      <button type="submit">Check their calendar!</button>
+  </form>
+</div>
+
   <!--Add buttons to initiate auth sequence and sign out-->
 
 
@@ -183,4 +199,3 @@
     <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
     <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
 </div>
-
