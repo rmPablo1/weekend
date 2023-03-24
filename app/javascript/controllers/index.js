@@ -13,8 +13,13 @@ application.register("insert-in-calendar", InsertInCalendarController)
 import NavbarSliderController from "./navbar_slider_controller"
 application.register("navbar-slider", NavbarSliderController)
 
+<<<<<<< HEAD
 import PopoverController from "./popover_controller"
 application.register("popover", PopoverController)
+=======
+import PopupController from "./popup_controller"
+application.register("popup", PopupController)
+>>>>>>> origin
 
 import SliderController from "./slider_controller"
 application.register("slider", SliderController)
