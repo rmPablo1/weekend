@@ -4,10 +4,10 @@
       <h1 class='no-margin month-selector'><%= link_to t('simple_calendar.previous', default: '<'), calendar.url_for_previous_view %>
       <span class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
       <%= link_to t('simple_calendar.next', default: '>'), calendar.url_for_next_view %></h1>
-      <p class='no-margin calendar-popup-text'>You haven't seen <span style="font-weight:1000" class='cursor-pointer'>Trevor</span> in a while!</p>
+      <p class='no-margin calendar-popup-text'>You haven't seen <span style='font-weight:1000;color:#ff5555;font-family:"Nunito";font-size:32px' class='cursor-pointer'>Trevor</span> in a while!</p>
     </div>
     <div class="flexbox calendar-heading-right">
-      <button class="dashboard-button-select" role="button" style="background-color=$orange"> <a href="https://www.ecosia.org/search?q=test&addon=chrome&addonversion=5.1.3&method=topbar">Select Friends</a> </button>
+      <button class="dashboard-button-select orange" role="button" style="background-color=$orange"> <a href="https://www.ecosia.org/search?q=test&addon=chrome&addonversion=5.1.3&method=topbar">Select Friends</a> </button>
       <button class="dashboard-button-create" role="button"> <a href="https://www.ecosia.org/search?q=test&addon=chrome&addonversion=5.1.3&method=topbar">Create event!</a> </button>
     </div>
   </div>

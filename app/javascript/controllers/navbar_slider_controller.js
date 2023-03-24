@@ -8,12 +8,12 @@ export default class extends Controller {
   }
 
   open() {
-    this.navbarTarget.classList.add('navbar-clicked-navbar')
-    this.mainbodyTarget.classList.add('navbar-clicked-mainbody')
+    this.navbarTarget.classList.remove('navbar-clicked-navbar')
+    this.mainbodyTarget.classList.remove('navbar-clicked-mainbody')
   }
 
   close() {
-    this.navbarTarget.classList.remove('navbar-clicked-navbar')
-    this.mainbodyTarget.classList.remove('navbar-clicked-mainbody')
+    this.navbarTarget.classList.add('navbar-clicked-navbar')
+    this.mainbodyTarget.classList.add('navbar-clicked-mainbody')
   }
 }
