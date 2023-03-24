@@ -6,8 +6,9 @@ Rails.application.routes.draw do
     omniauth_callbacks: 'users/omniauth_callbacks'
   }
   get "/dashboard", to: "dashboards#dashboard"
+  resources :events, only:[:new, :create]
 
-  post "/create-events", to: "pages#create_events"
+  post "/create-events-google", to: "pages#create_events_google"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
