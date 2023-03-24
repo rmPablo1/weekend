@@ -10,7 +10,7 @@ class PagesController < ApplicationController
     @start_link = user_signed_in? ? dashboard_path : new_user_session_path
   end
 
-  def create_events
+  def create_events_google
     puts "printing the params!!!!"
 
     params[:result][:items].each do |event|
