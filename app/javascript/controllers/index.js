@@ -7,11 +7,14 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import InsertInCalendarController from "./insert_in_calendar_controller"
+application.register("insert-in-calendar", InsertInCalendarController)
+
 import NavbarSliderController from "./navbar_slider_controller"
 application.register("navbar-slider", NavbarSliderController)
 
-import InsertInCalendarController from "./insert_in_calendar_controller"
-application.register("insert-in-calendar", InsertInCalendarController)
+import PopoverController from "./popover_controller"
+application.register("popover", PopoverController)
 
 import SliderController from "./slider_controller"
 application.register("slider", SliderController)
