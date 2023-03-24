@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
 Contact.destroy_all
 Contact.new(sender:User.find(10), receiver: User.find(11)).save!
 Contact.new(sender:User.find(10), receiver: User.find(12)).save!
@@ -18,3 +19,4 @@ Contact.new(sender:User.find(12), receiver: User.find(13)).save!
 Contact.new(sender:User.find(13), receiver: User.find(10)).save!
 Contact.new(sender:User.find(13), receiver: User.find(11)).save!
 Contact.new(sender:User.find(13), receiver: User.find(12)).save!
+

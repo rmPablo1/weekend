@@ -1,0 +1,24 @@
+.d-none {
+  display: none;
+}
+
+.popupcontainer {
+  transition: 3s;
+  position: absolute;
+  padding: 3vw;
+  top: 12%;
+  width: 265px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 1);
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 4px 16px 54px 0px rgba(0,0,0,0.3),
+0px 15px 12px 0px rgba(0,0,0,0.22);
+  border:3px solid black;
+  box-shadow: 10px 10px rgb(0, 0, 0);
+  li {
+    color: black;
+    list-style-type: none;
+  }
+
+}

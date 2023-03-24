@@ -5,8 +5,10 @@
       <%= date.strftime("%d") %>
       <% events.each do |event| %>
         <div>
-          <div class="event"><%= event.user.full_name %></div>
-          <%= event.start_time.strftime('%H') %>-<%= event.end_time.strftime('%H') %> <%= event.summary %></p></div>
+          <div class="event"><p><%= event.user.full_name %> <i class="fa-solid fa-clock"></i>
+            <%= event.start_time.strftime('%H') %>-<%= event.end_time.strftime('%H') %>
+            </p>
+          </div>
 
         </div>
       <% end %>
@@ -182,15 +184,3 @@
     <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
 </div>
 
-<div hidden>
-<form action="<%= dashboard_path %>" method="get" >
-    <% @friends.each do |friend| %>
-      <input
-        type="checkbox"
-        name="friends[<%= friend.receiver.id %>]"/>
-      <label for="friends[<%= friend.receiver.id %>]" <%= friend.receiver.full_name %>> <%= friend.receiver.full_name%></label>
-    <% end %>
-
-    <button type="submit">Check their calendar!</button>
-</form>
-</div>
