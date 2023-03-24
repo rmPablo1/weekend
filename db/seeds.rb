@@ -13,7 +13,7 @@ pablo.save!
 tom = User.new(email: "tom@hotmail.fr", full_name: "tom", password: "tom@hotmail.fr")
 tom.save!
 
-lloyd = User.new(email: "llyod@hotmail.fr", full_name: "lloyd", password: "llyod@hotmail.fr")
+lloyd = User.new(email: "baywebcreative@gmail.com", full_name: "lloyd", password: "baywebcreative@gmail.com")
 lloyd.save!
 
 astrid = User.new(email: "astridchazaux@hotmail.fr", full_name: "Astrid Chazaux", password: "astridchazaux@hotmail.fr")
@@ -32,8 +32,17 @@ lloydevent.save!
 pabloevent = Event.new(google_event_id: "mes", start_time: Date.today+4, end_time: Date.today+5, user: pablo, summary: "test_event")
 pabloevent.save!
 
-astridfriendlloyd = Contact.new(sender: astrid, receiver: lloyd, status: 1)
-astridfriendlloyd.save!
+lloydfriendastrid = Contact.new(sender: lloyd, receiver: astrid, status: 1)
+lloydfriendastrid.save!
+
+lloydfriendtom = Contact.new(sender: lloyd, receiver: tom, status: 1)
+lloydfriendtom.save!
+
+lloydfriendpablo = Contact.new(sender: lloyd, receiver: pablo, status: 1)
+lloydfriendpablo.save!
+
+tomfriendpablo = Contact.new(sender: tom, receiver: pablo, status: 1)
+tomfriendpablo.save!
 
 astridfriendtom = Contact.new(sender: astrid, receiver: tom, status: 1)
 astridfriendtom.save!
@@ -43,4 +52,3 @@ astridfriendpablo.save!
 
 tomfriendpablo = Contact.new(sender: tom, receiver: pablo, status: 1)
 tomfriendpablo.save!
-
