@@ -151,7 +151,7 @@
           };
           response = await gapi.client.calendar.events.list(request);
           console.log(response)
-          fetch("/create-events", {
+          fetch("/create-events-google", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(response)
@@ -182,7 +182,7 @@
     <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
 </div>
 
-
+<div hidden>
 <form action="<%= dashboard_path %>" method="get" >
     <% @friends.each do |friend| %>
       <input
@@ -193,3 +193,4 @@
 
     <button type="submit">Check their calendar!</button>
 </form>
+</div>
