@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
   font-family: $body-font;
   // background-color: rgb(233, 242, 246);
-  background-color: #ffc46be8;
+  background-color: #fdc879ac;
 }
 
 a {
@@ -54,4 +54,9 @@ a {
 
 .orange {
   background-color: #FAA11A !important;
+}
+
+
+.hidden {
+  visibility: hidden;
 }

@@ -1,13 +1,14 @@
 <div class='dashboard-all' data-controller='navbar-slider'>
   <div class="dashboard-main-body" data-navbar-slider-target="mainbody">
-    <p class='test-button' data-action="click->navbar-slider#open">open</p>
+    <p class='open-icon cursor-pointer hidden' data-action="click->navbar-slider#open" data-navbar-slider-target="close">&#187;</p>
     <%= month_calendar(events: @events) do |date, events| %>
       <%= date.strftime("%d") %>
       <% events.each do |event| %>
         <div>
-          <div class="event"><%= event.user.full_name %></div>
-          <%= event.start_time.strftime('%H') %>-<%= event.end_time.strftime('%H') %> <%= event.summary %></p></div>
-
+          <div class="event">
+          <div class='event-username'><%= event.user.full_name %></div>
+          <div class='event-times'><%= event.start_time.strftime('%H') %>-<%= event.end_time.strftime('%H') %> <%= event.summary %></p></div></div>
+          </div>
         </div>
       <% end %>
     <% end %>

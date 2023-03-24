@@ -10,7 +10,7 @@
 }
 
 .simple-calendar .today {
-  background-color: #2bc5d9
+  background-color: #10b0c5
 }
 
 .simple-calendar {
@@ -34,7 +34,7 @@
 }
 
 .dashboard-button-create {
-  background-color: #fe3333;
+  background-color: #ff5555;
 }
 
 .event {
@@ -44,7 +44,10 @@
   padding: 5px;
   border-radius: 8px;
   color: white;
+  width: 20%;
 }
+
+
 
 .simple-calendar table {
   border-collapse:separate;
@@ -99,7 +102,6 @@
   }
 }
 
-
 // Page
 
 .dashboard-main-body{
@@ -123,10 +125,21 @@
 
 // Navbar
 
-.test-button {
+.open-icon {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  bottom: 0;
+  margin-left: 2rem;
+  width: 40px;
+  height: 40px;
+  font-size: 28px;
+  background-color: #10B1C5;
+  font-family: "Nunito", sans-serif;
+  font-weight: 1000;
+  color: white;
+  box-shadow: 3px 3px black;
+  border: black solid 3px;
+  border-radius: 8px;
+  text-align: center;
 }
 
 .google-api-buttons {
@@ -139,7 +152,7 @@
   width: 30px;
   height: 30px;
   font-size: 22px;
-  background-color: #fe3333;
+  background-color: #ff5555;
   font-family: "Nunito", sans-serif;
   font-weight: 1000;
   color: white;
