@@ -15,18 +15,17 @@
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
         </div>
         <div class="form-actions">
-          <%= f.button :submit, "Log in" %>
+          <%= f.button :submit, "Log in", class: "login-button" %>
           <% end %>
           <%= render "devise/shared/links"%>
+          <p class='signup-slider'>Don't have an account? <span data-action="click->slider#right" class="cursor-pointer"><span class='bold-text'>Sign up!</span></span></p>
         </div>
-      <p class='signup-slider'>Don't have an account? <span data-action="click->slider#right" class="cursor-pointer"><strong>Sign up!</strong></span></p>
      </div>
   </div>
   <div class="signup-form-side">
     <div class='signup-form-box'>
       <%= image_tag('logo.png', class:"logo-login")  %>
       <%= render "devise/registrations/new" %>
-      <p class='login-slider'>Already have an account? <span data-action="click->slider#left" class="cursor-pointer"><strong>Login</strong></span></p>
       <img class='login-photo undraggable unselectable' data-slider-target="loginphoto" src='https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80'>
         </div>
     </div>

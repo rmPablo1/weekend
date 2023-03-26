@@ -6,7 +6,7 @@
       <% events.each do |event| %>
         <div>
           <div class="event">
-            <div class='event-username'><%= event.user.full_name %></div>
+            <div class='event-username event-user-<%= event.user_id %>'><%= event.user.full_name %></div>
             <div class='event-times'><i class="fa-solid fa-clock"></i> <%= event.start_time.strftime('%H') %>-<%= event.end_time.strftime('%H') %></div>
           </div>
         </div>
@@ -28,8 +28,11 @@
       <button id="authorize_button" onclick="handleAuthClick()" class="navbutton button orange">Sync</button>
 
     </div>
+        <!-- these next 3 lines are the select friends form copy and pasted, while removing the ability to actually select friends -->
+        <form action="<%= dashboard_path %>" method="get" >
+          <button type="submit" class="button navbutton">Clear</button>
+        </form>
         <%= button_to "My Account", edit_user_registration_path, class: "navbutton button"%>
-        <%= button_to "My Groups", edit_user_registration_path, class: "navbutton button" %>
         <%= button_to "My Friends", edit_user_registration_path, class: "navbutton button" %>
         <%= button_to "Logout", destroy_user_session_path, data: {turbo: "false"}, method: :delete, class: "navbutton button logout-button" %>
       <% else %>
