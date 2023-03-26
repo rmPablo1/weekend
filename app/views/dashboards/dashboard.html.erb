@@ -1,13 +1,15 @@
-<div class='dashboard-all' data-controller='navbar-slider popover'>
+<div class='dashboard-all' data-controller='navbar-slider popover event-hover'>
   <div class="dashboard-main-body" data-navbar-slider-target="mainbody">
     <p class='open-icon cursor-pointer hidden' data-action="click->navbar-slider#open" data-navbar-slider-target="close">&#187;</p>
     <%= month_calendar(events: @events) do |date, events| %>
       <%= date.strftime("%d") %>
       <% events.each do |event| %>
-        <div>
-          <div class="event">
+        <div data-event-hover-target='box'>
+          <div class="event" data-action='mouseover->event-hover#show mouseout->event-hover#hide' data-event-hover-target='border'>
             <div class='event-username event-user-<%= event.user_id %>'><%= event.user.full_name %></div>
-            <div class='event-times'><i class="fa-solid fa-clock"></i> <%= event.start_time.strftime('%H') %>-<%= event.end_time.strftime('%H') %></div>
+            <div class='event-times hidden' data-event-hover-target='info_1'><%= event.summary %></div>
+            <div class='event-times hidden' data-event-hover-target='info_2'><i class="fa-solid fa-clock"></i> <%= event.start_time.strftime('%H') %></div>
+            <div class='event-times hidden' data-event-hover-target='info_3'><i class="fa-solid fa-clock"></i ><%= event.end_time.strftime('%H') %></div>
           </div>
         </div>
       <% end %>
@@ -21,7 +23,7 @@
     <% if current_user %>
       <% if current_user.avatar_url %>
       <% end %>
-      <h2 class="navbar-welcome"><span class="welcome">Welcome</span> <%= current_user.email.match(/[^@]+/) %>!</h2>
+      <h2 class="navbar-welcome"><span class="welcome">Welcome<br></span> <%= current_user.full_name.match(/[^ ]+/) %>!</h2><!-- <%= current_user.email.match(/[^@]+/) %>!</h2> -->
         <!-- <%= image_tag(current_user.avatar_url, :class => "user-avatar") %> -->
         <div class="google-api-buttons">
       <!--Add buttons to initiate auth sequence and sign out-->
