@@ -1,26 +1,20 @@
 .login-form-box {
-  border: black solid 6px;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  background-color: #ff5555;
-  box-shadow: 20px 20px black;
   padding: 30px 20px;
   min-width: 20vw;
   max-width: 30vw;
 }
 
 .signup-form-box {
-  border: black solid 6px;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  background-color: #10b0c5;
-  box-shadow: 20px 20px black;
   padding: 30px 20px;
   min-width: 20vw;
   max-width: 30vw;
@@ -29,7 +23,6 @@
 .google-logo {
   width: 30px;
   height: 30px;
-  background: white;
   border-radius: 7px;
   padding: 6px;
 }
@@ -40,11 +33,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #10B1C5;
-  border: 3px solid black;
   border-radius: 8px;
-  box-shadow: 5px 5px black;
-  color: white;
   padding-right: 5px;
   width: 100%;
   transition: box-shadow 0.3s ease;
@@ -68,26 +57,15 @@
   height: 22px;
   padding: 10px 0 10px 10px;
   width: 300px;
-  border: black solid 3px;
-  box-shadow: 5px 5px black;
   a {
     text-decoration: none;
   }
 }
 
 input[type=submit]{
-  color: white;
   font-size: 20px;
   margin: 5px auto;
   cursor: pointer;
-}
-
-.signup-form input[type=submit]{
-  background-color: #ff5555;
-}
-
-.login-form input[type=submit]{
-  background-color: #10b0c5;
 }
 
 .form-header {
@@ -98,10 +76,6 @@ input[type=submit]{
   margin: 0px;
   max-width: 400px;
   margin: 0 50px 0 50px;
-}
-
-.form-check-input:checked {
-  background-color: #10B1C5 !important;
 }
 
 .form-check-label {
@@ -128,7 +102,7 @@ input[type=submit]{
 .or {
   font-weight: bold;
   font-size: 20px;
-  font-family: "PT-Sans", sans-serif;
+  font-family: $subfont;
   text-align: center;
   margin: 0;
 }
