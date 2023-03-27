@@ -1,13 +1,10 @@
 button {
   align-items: center;
-  background-color: $pink;
-  border: 2px solid #111;
   border-radius: 8px;
   box-sizing: border-box;
-  color: white;
   cursor: pointer;
   display: flex;
-  font-family: $body-font;
+  font-family: $subfont;
   font-weight: bold;
   font-size: 16px;
   height: 48px;
@@ -38,42 +35,14 @@ button:after {
   z-index: -1;
 }
 
-.button-56:hover:after, button:hover:after {
-  transform: translate(0, 0);
-}
-
-.button-56:active, button:active {
-  background-color: #ffdeda;
-  outline: 0;
-}
-
-.button-56:hover, button:hover {
-  outline: 0;
-}
-
-@media (min-width: 768px) {
-  .button-56 {
-    padding: 0 40px;
-  }
-}
-
-.button-56 a {
-  text-decoration: none;
-  color: white;
-}
-
 .dashboard-button-select {
   font-size: 32px;
   font-weight: 800;
   height: 70px;
-  box-shadow: 8px 8px black;
   a {
-    color: rgb(243, 243, 243);
     font-family: 'Nunito', sans-serif;
   }
   transition: box-shadow 0.3s ease;
-  background-color: #ff5555;
-  border: black solid 4px;
   margin-top: 20px;
 }
 
@@ -81,14 +50,10 @@ button:after {
   font-size: 32px;
   font-weight: 800;
   height: 70px;
-  box-shadow: 8px 8px black;
   a {
-    color: rgb(243, 243, 243);
     font-family: 'Nunito', sans-serif;
   }
   transition: box-shadow 0.3s ease;
-  background-color: #ff5555;
-  border: black solid 4px;
   margin-top: 20px;
 }
 
@@ -101,13 +66,7 @@ button:after {
   font-weight: 800;
   height: 10vh;
   font-family: 'Nunito', sans-serif;
-  box-shadow: 8px 8px black;
-  a {
-    color: rgb(243, 243, 243);
-  }
   transition: box-shadow 0.3s ease;
-  background-color: #ff5555;
-  border: black solid 4px;
   margin-top: 20px;
 }
 
@@ -122,13 +81,7 @@ button:after {
   font-weight: 800;
   height: 10vh;
   font-family: 'Nunito', sans-serif;
-  box-shadow: 8px 8px black;
-  a {
-    color: rgb(243, 243, 243);
-  }
   transition: box-shadow 0.3s ease;
-  background-color: #ff5555;
-  border: black solid 4px;
   margin-top: 20px;
 }
 
@@ -145,8 +98,6 @@ button:after {
   height: 46px;
   transition: box-shadow 0.3s ease;
   border-radius: 5px;
-  border: black solid 3px;
-  box-shadow: 5px 5px black;
   font-weight: bold;
 }
 
@@ -155,8 +106,6 @@ button:after {
   height: 46px;
   transition: box-shadow 0.3s ease;
   border-radius: 5px;
-  border: black solid 3px;
-  box-shadow: 5px 5px black;
   font-weight: bold;
   margin-top: 30px !important;
 }

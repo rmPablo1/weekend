@@ -1,0 +1,243 @@
+$orange: #FBC904;
+$green: #91D99C;
+$pink: #F190DC;
+
+.simple-calendar .today {
+  // background-color: #7dd5e0
+  background-color: $pink;
+}
+
+.simple-calendar {
+  th {
+    color: white;
+    border:3px solid black;
+    // background-color: #10b0c5;
+    background-color: $green;
+  }
+  td {
+    border:3px solid black;
+    background-color: rgb(255, 255, 255);
+  }
+  td:hover {
+    // background-color: #ff6c6c;
+    background-color: $pink;
+  }
+}
+
+.dashboard-button-create {
+  // background-color: #ff5555;
+  background-color: $pink;
+}
+
+.event {
+  background-color: $orange;
+  color: white;
+  border: 3px solid black;
+}
+
+.simple-calendar table {
+  box-shadow: 20px 20px rgb(0, 0, 0);
+  border:3px solid rgb(0, 0, 0);
+}
+
+.open-icon {
+  background-color: $green;
+  color: white;
+  box-shadow: 3px 3px black;
+  border: black solid 3px;
+}
+
+.close-icon {
+  background-color: $pink;
+  color: white;
+  box-shadow: 3px 3px black;
+  border: black solid 3px;
+}
+
+.dashboard-navbar {
+  background-color: $green;
+  border-right: black solid 6px;
+}
+
+.user-avatar {
+  border: 3px solid black;
+  box-shadow: 3px 3px black;
+}
+
+.navbutton {
+  border: 4px black solid;
+}
+
+.random-friend {
+  color: $pink;
+}
+
+.dashboard-button-select {
+  box-shadow: 8px 8px black;
+  a {
+    color: rgb(243, 243, 243);
+  }
+  background-color: $green;
+  border: black solid 4px;
+}
+
+.dashboard-button-create {
+  box-shadow: 8px 8px black;
+  a {
+    color: rgb(243, 243, 243);
+  }
+  background-color: $pink;
+  border: black solid 4px;
+}
+
+.button {
+  box-shadow: 8px 8px black;
+  a {
+    color: rgb(243, 243, 243);
+  }
+  background-color: $pink;
+  border: black solid 4px;
+}
+
+
+.signup-button {
+  border: black solid 3px;
+  box-shadow: 5px 5px black;
+}
+.orange {
+  // background-color: #FAA11A !important;
+  background-color: $orange !important;
+}
+
+// LOGIN STUFF
+
+.login-button {
+  border: black solid 3px;
+  box-shadow: 5px 5px black;
+}
+
+.login-form-side {
+  background-color: $green;
+  border-right: solid black 8px;
+}
+
+.signup-form-side {
+  background-color: $pink;
+}
+
+.login-form-box {
+  border: black solid 6px;
+  background-color: $pink;
+  box-shadow: 20px 20px black;
+}
+
+.signup-form-box {
+  border: black solid 6px;
+  background-color: $green;
+  box-shadow: 20px 20px black;
+}
+
+.form-control {
+  border: black solid 3px;
+  box-shadow: 5px 5px black;
+}
+
+input[type=submit]{
+  color: white;
+}
+
+.signup-form input[type=submit]{
+  background-color: $pink;
+}
+
+.login-form input[type=submit]{
+  background-color: $green;
+}
+
+.form-check-input:checked {
+  background-color: $green !important;
+}
+
+.google-logo {
+  background: white;
+}
+
+
+// HOMEPAGE STUFF
+
+.letsgo-button {
+  box-shadow: 8px 8px black;
+  a {
+    color: rgb(243, 243, 243);
+  }
+  background-color: $green;
+  border: black solid 4px;
+}
+
+.google-login {
+  background-color:$green;
+  border: 3px solid black;
+  box-shadow: 5px 5px black;
+  color: white;
+}
+
+.homepage-left {
+  background-color: $pink;
+  border-right: black solid 4px
+}
+
+.homepage-right {
+  background-color: $green;
+  border-left: black solid 4px;
+}
+
+.pic-home {
+  box-shadow: 20px 20px rgba(0, 0, 0, 0.836);
+}
+
+.h1-home {
+  color: #1f2225;
+}
+
+.typed-text {
+  color: $green;
+  text-shadow: 1px 1px 0 #000,
+  -2px 2px 0 #1f2225,
+  2px -2px 0 #1f2225,
+  -2px -2px 0 #1f2225,
+  0px 2px 0 #1f2225,
+  0px -2px 0 #1f2225,
+  -2px 0px 0 #1f2225,
+  2px 0px 0 #1f2225,
+  3px 3px 0 #1f2225,
+  -3px 3px 0 #1f2225,
+  3px -3px 0 #1f2225,
+  -3px -3px 0 #1f2225,
+  0px 3px 0 #1f2225,
+  0px -3px 0 #1f2225,
+  -3px 0px 0 #1f2225,
+  3px 0px 0 #1f2225,
+  2px 3px 0 #1f2225,
+  -2px 3px 0 #1f2225,
+  2px -3px 0 #1f2225,
+  -2px -3px 0 #1f2225,
+  3px 2px 0 #1f2225,
+  -3px 2px 0 #1f2225,
+  3px -2px 0 #1f2225,
+  -3px -2px 0 #1f2225;
+}
+
+.phome {
+  color: #292F36;
+}
+
+body {
+  // background-color: rgb(233, 242, 246);
+  // background-color: #ffffff;
+  background: linear-gradient(310deg,$pink 0%, $orange 100%);
+}
+
+button {
+  border: 2px solid #111;
+  color: white;
+}
