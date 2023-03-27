@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import EventHoverController from "./event_hover_controller"
+application.register("event-hover", EventHoverController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
@@ -13,13 +16,8 @@ application.register("insert-in-calendar", InsertInCalendarController)
 import NavbarSliderController from "./navbar_slider_controller"
 application.register("navbar-slider", NavbarSliderController)
 
-<<<<<<< HEAD
-import PopoverController from "./popover_controller"
-application.register("popover", PopoverController)
-=======
 import PopupController from "./popup_controller"
 application.register("popup", PopupController)
->>>>>>> origin
 
 import SliderController from "./slider_controller"
 application.register("slider", SliderController)
