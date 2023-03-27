@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_22_034842) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_27_090104) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,6 +33,28 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_22_034842) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "followability_relationships", force: :cascade do |t|
+    t.string "followerable_type", null: false
+    t.bigint "followerable_id", null: false
+    t.string "followable_type", null: false
+    t.bigint "followable_id", null: false
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["followable_type", "followable_id"], name: "index_followability_relationships_on_followable"
+    t.index ["followerable_type", "followerable_id"], name: "index_followability_relationships_on_followerable"
+  end
+
+  create_table "tokens", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "access_token"
+    t.string "refresh_token"
+    t.integer "expires_at"
+    t.string "provider"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
