@@ -1,7 +1,6 @@
 button {
   align-items: center;
   border-radius: 8px;
-  box-sizing: border-box;
   cursor: pointer;
   display: flex;
   font-family: $subfont;
@@ -20,28 +19,11 @@ button {
   touch-action: manipulation;
 }
 
-button:after {
-  background-color: #111;
-  border-radius: 8px;
-  content: "";
-  display: block;
-  height: 48px;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  top: -2px;
-  transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
-  z-index: -1;
-}
-
 .dashboard-button-select {
   font-size: 32px;
   font-weight: 800;
   height: 70px;
-  a {
-    font-family: 'Nunito', sans-serif;
-  }
+  font-family: $mainfont;
   transition: box-shadow 0.3s ease;
   margin-top: 20px;
 }
@@ -51,7 +33,7 @@ button:after {
   font-weight: 800;
   height: 70px;
   a {
-    font-family: 'Nunito', sans-serif;
+    font-family: $mainfont;
   }
   transition: box-shadow 0.3s ease;
   margin-top: 20px;

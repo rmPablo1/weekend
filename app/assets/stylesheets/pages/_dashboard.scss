@@ -10,7 +10,8 @@
 }
 
 .simple-calendar {
-  font-family: $subfont;
+  font-family: $altfont;
+  font-weight: lighter;
   height: calc(100vh - 30px);
   padding: 0 5vw;
   th {
@@ -20,6 +21,10 @@
   td {
     padding: 0;
   }
+}
+
+.calendar-title {
+  font-family: $mainfont;
 }
 
 .event {

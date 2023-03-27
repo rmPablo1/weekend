@@ -1,21 +1,24 @@
-$orange: #FBC904;
-$green: #91D99C;
-$pink: #F190DC;
+$blue: #70D3D8;
+$green: #BDFFD4;
+$pink: #FFABAB;
+$purple: #E0C9F0;
+$yellow: #FCFF9E;
+$shadow: rgb(58, 58, 58);
 
 .simple-calendar .today {
   // background-color: #7dd5e0
-  background-color: $pink;
+  background-color: $green;
 }
 
 .simple-calendar {
   th {
-    color: white;
-    border:3px solid black;
+    color: $shadow;
+    border:1px solid $shadow;
     // background-color: #10b0c5;
-    background-color: $green;
+    background-color: $purple;
   }
   td {
-    border:3px solid black;
+    border:1px solid $shadow;
     background-color: rgb(255, 255, 255);
   }
   td:hover {
@@ -30,42 +33,45 @@ $pink: #F190DC;
 }
 
 .event {
-  background-color: $orange;
+  background-color: $blue;
   color: white;
-  border: 3px solid black;
+  border: 1px solid rgb(59, 59, 59);
 }
 
 .simple-calendar table {
-  box-shadow: 20px 20px rgb(0, 0, 0);
-  border:3px solid rgb(0, 0, 0);
+  box-shadow: 20px 20px $shadow;
+  border:2px solid $shadow;
+  box-shadow: 7px 7px $shadow,
 }
 
 .open-icon {
-  background-color: $green;
+  background-color: $blue;
   color: white;
-  box-shadow: 3px 3px black;
-  border: black solid 3px;
+  box-shadow: 1px 1px $shadow;
+  border: $shadow solid 1px;
 }
 
 .close-icon {
-  background-color: $pink;
+  background-color: #ff5555;
   color: white;
-  box-shadow: 3px 3px black;
-  border: black solid 3px;
+  box-shadow: 3px 3px $shadow;
+  border: $shadow solid 1px;
 }
 
 .dashboard-navbar {
-  background-color: $green;
-  border-right: black solid 6px;
+  background-color: $pink;
+  border-right: $shadow solid 2px;
 }
 
 .user-avatar {
-  border: 3px solid black;
-  box-shadow: 3px 3px black;
+  border: 1px solid $shadow;
+  box-shadow: 3px 3px $shadow;
 }
 
 .navbutton {
-  border: 4px black solid;
+  border: 4px $shadow solid;
+  background-color: white !important;
+  color: $shadow;
 }
 
 .random-friend {
@@ -73,52 +79,50 @@ $pink: #F190DC;
 }
 
 .dashboard-button-select {
-  box-shadow: 8px 8px black;
-  a {
-    color: rgb(243, 243, 243);
-  }
-  background-color: $green;
-  border: black solid 4px;
+  box-shadow: 8px 8px $shadow;
+  color: $shadow;
+  background-color: $blue;
+  border: $shadow solid 2px;
 }
 
 .dashboard-button-create {
-  box-shadow: 8px 8px black;
+  box-shadow: 8px 8px $shadow;
   a {
-    color: rgb(243, 243, 243);
+    color: $shadow;
   }
   background-color: $pink;
-  border: black solid 4px;
+  border: $shadow solid 2px;
 }
 
 .button {
-  box-shadow: 8px 8px black;
+  box-shadow: 8px 8px $shadow;
   a {
-    color: rgb(243, 243, 243);
+    color: $shadow;
   }
   background-color: $pink;
-  border: black solid 4px;
+  border: $shadow solid 2px;
 }
 
 
 .signup-button {
-  border: black solid 3px;
-  box-shadow: 5px 5px black;
+  border: $shadow solid 1px;
+  box-shadow: 5px 5px $shadow;
 }
 .orange {
   // background-color: #FAA11A !important;
-  background-color: $orange !important;
+  background-color: $blue !important;
 }
 
 // LOGIN STUFF
 
 .login-button {
-  border: black solid 3px;
-  box-shadow: 5px 5px black;
+  border: $shadow solid 1px;
+  box-shadow: 5px 5px $shadow;
 }
 
 .login-form-side {
   background-color: $green;
-  border-right: solid black 8px;
+  border-right: solid $shadow 4px;
 }
 
 .signup-form-side {
@@ -126,20 +130,20 @@ $pink: #F190DC;
 }
 
 .login-form-box {
-  border: black solid 6px;
+  border: $shadow solid 2px;
   background-color: $pink;
-  box-shadow: 20px 20px black;
+  box-shadow: 20px 20px $shadow;
 }
 
 .signup-form-box {
-  border: black solid 6px;
+  border: $shadow solid 2px;
   background-color: $green;
-  box-shadow: 20px 20px black;
+  box-shadow: 20px 20px $shadow;
 }
 
 .form-control {
-  border: black solid 3px;
-  box-shadow: 5px 5px black;
+  border: $shadow solid 2px;
+  box-shadow: 5px 5px $shadow;
 }
 
 input[type=submit]{
@@ -171,24 +175,24 @@ input[type=submit]{
     color: rgb(243, 243, 243);
   }
   background-color: $green;
-  border: black solid 4px;
+  border: black solid 2px;
 }
 
 .google-login {
   background-color:$green;
-  border: 3px solid black;
-  box-shadow: 5px 5px black;
+  border: 1px solid $shadow;
+  box-shadow: 5px 5px $shadow;
   color: white;
 }
 
 .homepage-left {
   background-color: $pink;
-  border-right: black solid 4px
+  border-right: $shadow solid 2px
 }
 
 .homepage-right {
   background-color: $green;
-  border-left: black solid 4px;
+  border-left: $shadow solid 2px;
 }
 
 .pic-home {
@@ -201,30 +205,30 @@ input[type=submit]{
 
 .typed-text {
   color: $green;
-  text-shadow: 1px 1px 0 #000,
-  -2px 2px 0 #1f2225,
-  2px -2px 0 #1f2225,
-  -2px -2px 0 #1f2225,
-  0px 2px 0 #1f2225,
-  0px -2px 0 #1f2225,
-  -2px 0px 0 #1f2225,
-  2px 0px 0 #1f2225,
-  3px 3px 0 #1f2225,
-  -3px 3px 0 #1f2225,
-  3px -3px 0 #1f2225,
-  -3px -3px 0 #1f2225,
-  0px 3px 0 #1f2225,
-  0px -3px 0 #1f2225,
-  -3px 0px 0 #1f2225,
-  3px 0px 0 #1f2225,
-  2px 3px 0 #1f2225,
-  -2px 3px 0 #1f2225,
-  2px -3px 0 #1f2225,
-  -2px -3px 0 #1f2225,
-  3px 2px 0 #1f2225,
-  -3px 2px 0 #1f2225,
-  3px -2px 0 #1f2225,
-  -3px -2px 0 #1f2225;
+  text-shadow: 1px 1px 0 $shadow,
+  -2px 2px 0 $shadow,
+  2px -2px 0 $shadow,
+  -2px -2px 0 $shadow,
+  0px 2px 0 $shadow,
+  0px -2px 0 $shadow,
+  -2px 0px 0 $shadow,
+  2px 0px 0 $shadow,
+  3px 3px 0 $shadow,
+  -3px 3px 0 $shadow,
+  3px -3px 0 $shadow,
+  -3px -3px 0 $shadow,
+  0px 3px 0 $shadow,
+  0px -3px 0 $shadow,
+  -3px 0px 0 $shadow,
+  3px 0px 0 $shadow,
+  2px 3px 0 $shadow,
+  -2px 3px 0 $shadow,
+  2px -3px 0 $shadow,
+  -2px -3px 0 $shadow,
+  3px 2px 0 $shadow,
+  -3px 2px 0 $shadow,
+  3px -2px 0 $shadow,
+  -3px -2px 0 $shadow;
 }
 
 .phome {
@@ -234,10 +238,15 @@ input[type=submit]{
 body {
   // background-color: rgb(233, 242, 246);
   // background-color: #ffffff;
-  background: linear-gradient(310deg,$pink 0%, $orange 100%);
+  background: white;
 }
 
 button {
-  border: 2px solid #111;
+  border: 1px solid $shadow;
   color: white;
+}
+
+
+body * {
+  border-radius: 0px !important;
 }
