@@ -61,6 +61,7 @@ $shadow: rgb(58, 58, 58);
 .dashboard-navbar {
   background-color: $pink;
   border-right: $shadow solid 2px;
+  box-shadow: 6px 6px $shadow;
 }
 
 .user-avatar {
@@ -101,6 +102,10 @@ $shadow: rgb(58, 58, 58);
   }
   background-color: $pink;
   border: $shadow solid 2px;
+}
+
+.logout-button {
+  background-color: $pink;
 }
 
 
@@ -170,12 +175,12 @@ input[type=submit]{
 // HOMEPAGE STUFF
 
 .letsgo-button {
-  box-shadow: 8px 8px black;
+  box-shadow: 8px 8px $shadow;
   a {
     color: rgb(243, 243, 243);
   }
   background-color: $green;
-  border: black solid 2px;
+  border: $shadow solid 2px;
 }
 
 .google-login {

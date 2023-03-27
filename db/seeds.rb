@@ -7,24 +7,17 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Contact.destroy_all
-Contact.new(sender:User.find(10), receiver: User.find(11)).save!
-Contact.new(sender:User.find(10), receiver: User.find(12)).save!
-Contact.new(sender:User.find(10), receiver: User.find(13)).save!
-Contact.new(sender:User.find(11), receiver: User.find(10)).save!
-Contact.new(sender:User.find(11), receiver: User.find(13)).save!
-Contact.new(sender:User.find(11), receiver: User.find(12)).save!
-Contact.new(sender:User.find(12), receiver: User.find(10)).save!
-Contact.new(sender:User.find(12), receiver: User.find(11)).save!
-Contact.new(sender:User.find(12), receiver: User.find(13)).save!
-Contact.new(sender:User.find(13), receiver: User.find(10)).save!
-Contact.new(sender:User.find(13), receiver: User.find(11)).save!
-Contact.new(sender:User.find(13), receiver: User.find(12)).save!
+# Contact.new(sender:User.find(10), receiver: User.find(11)).save!
+# Contact.new(sender:User.find(10), receiver: User.find(12)).save!
+# Contact.new(sender:User.find(10), receiver: User.find(13)).save!
+# Contact.new(sender:User.find(11), receiver: User.find(10)).save!
+# Contact.new(sender:User.find(11), receiver: User.find(13)).save!
+# Contact.new(sender:User.find(11), receiver: User.find(12)).save!
+# Contact.new(sender:User.find(12), receiver: User.find(10)).save!
+# Contact.new(sender:User.find(12), receiver: User.find(11)).save!
+# Contact.new(sender:User.find(12), receiver: User.find(13)).save!
+# Contact.new(sender:User.find(13), receiver: User.find(10)).save!
+# Contact.new(sender:User.find(13), receiver: User.find(11)).save!
+# Contact.new(sender:User.find(13), receiver: User.find(12)).save!
 
 # commented out so I can seed my local database to give myself friends so I can work on the front end
-
-
-# Contact.new(sender:User.find(1), receiver: User.find(3)).save!
-# Contact.new(sender:User.find(1), receiver: User.find(4)).save!
-# Contact.new(sender:User.find(1), receiver: User.find(5)).save!
-# Contact.new(sender:User.find(1), receiver: User.find(6)).save!
-# Contact.new(sender:User.find(1), receiver: User.find(7)).save!
