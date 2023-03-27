@@ -16,19 +16,19 @@
   }
   td:hover {
     // background-color: #ff6c6c;
-    background-color: $purple;
+    background-color: $yellow;
   }
 }
 
 .simple-calendar .prev-month {
-  background-color: #ffd3d3;
+  background-color: #e7e7e7;
 }
 .simple-calendar .next-month {
-  background: #ffd3d3;
+  background: #e7e7e7;
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) > * {
-  --bs-table-accent-bg: rgb(255 0 0 / 5%) !important;
+  --bs-table-accent-bg: rgba(255, 255, 255, 0) !important;
   color: var(--bs-table-striped-color) !important;
 }
 
@@ -50,25 +50,25 @@
 .simple-calendar table {
   box-shadow: 20px 20px $shadow;
   border:2px solid $shadow;
-  box-shadow: 7px 7px $shadow,
+  box-shadow: 9px 9px $shadow,
 }
 
 .open-icon {
-  background-color: $blue;
+  background-color: $darkblue;
   color: $shadow;
-  box-shadow: 1px 1px $shadow;
+  box-shadow: 3px 3px $shadow;
   border: $shadow solid 1px;
 }
 
 .close-icon {
-  background-color: #ff5555;
-  color: white;
+  background-color: $pink;
+  color: $shadow;
   box-shadow: 3px 3px $shadow;
   border: $shadow solid 1px;
 }
 
 .dashboard-navbar {
-  background-color:#ffababa9;
+  background: rgba(244, 244, 244, 0.801);
   border-right: $shadow solid 2px;
   box-shadow: 5px 5px $shadow;
 }
@@ -251,7 +251,7 @@ input[type=submit]{
 body {
   // background-color: rgb(233, 242, 246);
   // background-color: #ffffff;
-  background: white;
+  background: rgb(244, 244, 244);
 }
 
 button {

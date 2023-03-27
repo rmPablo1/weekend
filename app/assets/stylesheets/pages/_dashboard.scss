@@ -18,13 +18,13 @@
     text-align: center;
     font-size: 32px;
   }
-  td {
-    padding: 0;
-  }
 }
 
 .calendar-title {
   font-family: $mainfont;
+  text-align: center;
+  min-width: 450px;
+  font-weight: 600;
 }
 
 .event {
@@ -59,7 +59,6 @@
   padding-bottom: 1rem;
   h1 {
     font-size: 60px;
-    font-weight: 800;
   }
 }
 
@@ -125,6 +124,15 @@
   font-weight: 1000;
   border-radius: 8px;
   text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.open-icon:hover {
+  box-shadow: none;
+}
+
+.close-icon:hover {
+  box-shadow: none;
 }
 
 .google-api-buttons {
@@ -143,6 +151,7 @@
   text-align: center;
   align-self: flex-end;
   margin: 1rem 1rem 0 0;
+  transition: box-shadow 0.3s ease;
 }
 
 .dashboard-navbar {
