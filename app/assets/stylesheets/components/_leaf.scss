@@ -1,10 +1,66 @@
 .leaf1 {
   border-radius: 33% 67% 70% 30% / 78% 41% 59% 22% !important;
-  background-color:$yellow;
+  background-color:$darkblue;
   position: absolute;
   top: 40px;
   left: 300px;
   height: 300px;
   width: 300px;
+  z-index: -1;
+}
+
+.leaf2 {
+  border-radius: 76% 24% 31% 69% / 78% 73% 27% 22% !important;
+  background-color: $blue;
+  position: absolute;
+  bottom: 10px;
+  right: 25px;
+  height: 400px;
+  width: 300px;
+  z-index: -1;
+}
+
+.leaf3 {
+  border-radius: 39% 61% 32% 68% / 60% 22% 78% 40%  !important;
+  background-color: $darkblue;
+  position: absolute;
+  bottom: -10vh;
+  left: -45px;
+  height: 400px;
+  width: 600px;
+  z-index: -1;
+}
+
+
+.leaf4 {
+  border-radius: 36% 64% 25% 75% / 73% 69% 31% 27%  !important;
+  background-color: $yellow;
+  position: absolute;
+  bottom: -5vh;
+  left: 50vw;
+  height: 400px;
+  width: 300px;
+  z-index: -1;
+}
+
+.leaf5 {
+  border-radius: 36% 64% 25% 75% / 73% 69% 31% 27%  !important;
+  background-color: $yellow;
+  position: absolute;
+  top: -2vh;
+  right: -2vw;
+  height: 400px;
+  width: 500px;
+  z-index: -1;
+}
+
+.leaf6 {
+  border-radius:36% 64% 26% 74% / 38% 18% 82% 62% !important;
+  background-color: $blue;
+  position: absolute;
+  top: -2vh;
+  left: -15vw;
+  height: 600px;
+  width: 500px;
   z-index: -1;
 }

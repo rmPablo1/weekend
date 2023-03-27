@@ -1,13 +1,6 @@
-$blue: #70D3D8;
-$green: #BDFFD4;
-$pink: #FFABAB;
-$purple: #E0C9F0;
-$yellow: #FCFF9E;
-$shadow: rgb(58, 58, 58);
-
 .simple-calendar .today {
   // background-color: #7dd5e0
-  background-color: $green;
+  background-color: $purple;
 }
 
 .simple-calendar {
@@ -19,12 +12,28 @@ $shadow: rgb(58, 58, 58);
   }
   td {
     border:1px solid $shadow;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
   }
   td:hover {
     // background-color: #ff6c6c;
-    background-color: $pink;
+    background-color: $purple;
   }
+}
+
+.simple-calendar .prev-month {
+  background-color: #ffd3d3;
+}
+.simple-calendar .next-month {
+  background: #ffd3d3;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg: rgb(255 0 0 / 5%) !important;
+  color: var(--bs-table-striped-color) !important;
+}
+
+.calendar-title {
+  color: $shadow;
 }
 
 .dashboard-button-create {
@@ -46,7 +55,7 @@ $shadow: rgb(58, 58, 58);
 
 .open-icon {
   background-color: $blue;
-  color: white;
+  color: $shadow;
   box-shadow: 1px 1px $shadow;
   border: $shadow solid 1px;
 }
@@ -59,18 +68,18 @@ $shadow: rgb(58, 58, 58);
 }
 
 .dashboard-navbar {
-  background-color: $pink;
+  background-color:#ffababa9;
   border-right: $shadow solid 2px;
+  box-shadow: 5px 5px $shadow;
 }
 
-.user-avatar {
-  border: 1px solid $shadow;
-  box-shadow: 3px 3px $shadow;
+.navbar-welcome {
+  color: $shadow;
 }
 
 .navbutton {
   border: 4px $shadow solid;
-  background-color: white !important;
+  background-color: white;
   color: $shadow;
 }
 
@@ -99,7 +108,7 @@ $shadow: rgb(58, 58, 58);
   a {
     color: $shadow;
   }
-  background-color: $pink;
+  background-color: white;
   border: $shadow solid 2px;
 }
 
@@ -170,12 +179,12 @@ input[type=submit]{
 // HOMEPAGE STUFF
 
 .letsgo-button {
-  box-shadow: 8px 8px black;
+  box-shadow: 8px 8px $shadow;
   a {
     color: rgb(243, 243, 243);
   }
   background-color: $green;
-  border: black solid 2px;
+  border: $shadow solid 2px;
 }
 
 .google-login {
