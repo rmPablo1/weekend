@@ -9,58 +9,40 @@
   }
 }
 
-.simple-calendar .today {
-  background-color: #10b0c5
-}
-
 .simple-calendar {
-  font-family: $body-font;
-  height: 100vh;
+  font-family: $altfont;
+  font-weight: lighter;
+  height: calc(100vh - 30px);
   padding: 0 5vw;
   th {
     text-align: center;
-    color: white;
     font-size: 32px;
-    border:3px solid black;
-    background-color: #10b0c5;
   }
   td {
-    border:3px solid black;
-    background-color: rgb(255, 255, 255);
-  }
-  td:hover {
-    background-color: #ff5555;
+    padding: 0;
   }
 }
 
-.dashboard-button-create {
-  background-color: #ff5555;
+.calendar-title {
+  font-family: $mainfont;
 }
 
 .event {
-  background-color:$pink;
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-  height:32px;
-  font-family: "PT-Sans", sans-serif ;
+  height:18px;
+  font-family: $subfont ;
   padding: 5px;
-  border-radius: 8px 0 0 8px;
-  color: white;
+  border-radius: 8px;
   width: 80%;
-  border: 3px solid black;
-  overflow-y: scroll;
   direction:ltr;
   margin: 0 auto;
 }
 
-
-
 .simple-calendar table {
   border-collapse:separate;
   border-radius: 8px;
-  box-shadow: 20px 20px rgb(0, 0, 0);
-  border:3px solid rgb(0, 0, 0);
 }
 
 .calendar-heading-right {
@@ -94,7 +76,7 @@
 }
 
 .calendar-popup-text {
-  font-family: "PT-Sans", sans-serif;
+  font-family: $subfont;
   font-weight: 600;
   font-size: 24px;
   span {
@@ -139,12 +121,8 @@
   width: 40px;
   height: 40px;
   font-size: 28px;
-  background-color: #10B1C5;
-  font-family: "Nunito", sans-serif;
+  font-family: $mainfont;
   font-weight: 1000;
-  color: white;
-  box-shadow: 3px 3px black;
-  border: black solid 3px;
   border-radius: 8px;
   text-align: center;
 }
@@ -159,12 +137,8 @@
   width: 30px;
   height: 30px;
   font-size: 22px;
-  background-color: #ff5555;
-  font-family: "Nunito", sans-serif;
+  font-family: $mainfont;
   font-weight: 1000;
-  color: white;
-  box-shadow: 3px 3px black;
-  border: black solid 3px;
   border-radius: 8px;
   text-align: center;
   align-self: flex-end;
@@ -177,8 +151,6 @@
   left: 0;
   height: 100vh;
   width: 15vw;
-  background-color: #10B1C5;
-  border-right: black solid 6px;
   transition: transform 0.5s ease;
   display: flex;
   flex-direction: column;
@@ -189,8 +161,6 @@
   width: 40%;
   height: auto;
   border-radius: 50%;
-  border: 3px solid black;
-  box-shadow: 3px 3px black;
 }
 
 .logo-navbar {
@@ -203,7 +173,7 @@
   width: 80%;
   text-align: center;
   word-wrap: break-word;
-  font-family: "Nunito", sans-serif;
+  font-family: $mainfont;
   font-weight: 700;
   font-size: 28px;
 }
@@ -216,17 +186,12 @@
 .navbutton {
   width: 11vw;
   margin-top: 30px;
-  border: 4px black solid;
-  font-family: "Nunito", sans-serif;
+  font-family: $mainfont;
   font-weight: 700;
   font-size: 28px;
   height: 60px;
 }
 
-.logout-button {
-  margin-top: 100px;
-  background-color: #fe3333;
-}
 // media queries
 
 @media screen and (max-width: 1820px) {
@@ -260,4 +225,32 @@
   .dashboard-button-select {
       display: none !important;
   }
+}
+
+
+.beeble {
+  background-color: #ff5555 !important;
+  width: 100%;
+  height: 120%;
+  position: relative;
+  top: -20px;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.day {
+  overflow: hidden;
+}
+
+
+.beeble2 {
+  border: none !important;
+}
+
+.random-friend {
+  font-weight:1000;
+  font-family:$mainfont;
+  font-size:32px;
 }

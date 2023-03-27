@@ -1,26 +1,20 @@
 .login-form-box {
-  border: black solid 6px;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
-  background-color: #ff5555;
-  box-shadow: 20px 20px black;
+  border-radius: 15px;
   padding: 30px 20px;
   min-width: 20vw;
   max-width: 30vw;
 }
 
 .signup-form-box {
-  border: black solid 6px;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
-  background-color: #10b0c5;
-  box-shadow: 20px 20px black;
+  border-radius: 15px;
   padding: 30px 20px;
   min-width: 20vw;
   max-width: 30vw;
@@ -29,14 +23,24 @@
 .google-logo {
   width: 30px;
   height: 30px;
-  background: white;
-  border-radius: 50%;
-  padding: 5px;
+  border-radius: 7px;
+  padding: 6px;
 }
 
+
 .google-login {
-  display:flex;
+  margin: 10px 0;
+  display: flex;
   align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  padding-right: 5px;
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+.google-login:hover {
+  box-shadow: none;
 }
 
 .mb-3 {
@@ -49,38 +53,56 @@
 }
 
 .form-control {
-  border-radius: 10px;
-  padding: 10px 0;
-  width: 90%;
-  border: black solid 3px;
-  box-shadow: 3px 3px black;
+  border-radius: 5px;
+  height: 22px;
+  padding: 10px 0 10px 10px;
+  width: 300px;
   a {
     text-decoration: none;
   }
 }
 
 input[type=submit]{
-  color: white;
   font-size: 20px;
-  border-radius: 3px;
-  border: black solid 2px;
-  box-shadow: 2px 2px black;
   margin: 5px auto;
   cursor: pointer;
 }
 
-.signup-form input[type=submit]{
-  background-color: #ff5555;
-}
-
-.login-form input[type=submit]{
-  background-color: #10b0c5;
-}
-
-input[type=submit]
-
 .form-header {
-  max-width: 70%;
   text-align: center;
-  font-size: 40px;
+  font-size: 32px;
+  font-weight: 900;
+  padding: 0px;
+  margin: 0px;
+  max-width: 400px;
+  margin: 0 50px 0 50px;
+}
+
+.form-check-label {
+  padding-left: 5px;
+}
+
+.google-login-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.signup-slider {
+  font-size: 20px;
+  margin: 20px 0 20px 0;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.or {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: $subfont;
+  text-align: center;
+  margin: 0;
 }

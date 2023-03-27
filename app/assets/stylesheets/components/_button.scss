@@ -1,14 +1,9 @@
-
 button {
   align-items: center;
-  background-color: $pink;
-  border: 2px solid #111;
   border-radius: 8px;
-  box-sizing: border-box;
-  color: white;
   cursor: pointer;
   display: flex;
-  font-family: $body-font;
+  font-family: $subfont;
   font-weight: bold;
   font-size: 16px;
   height: 48px;
@@ -24,57 +19,12 @@ button {
   touch-action: manipulation;
 }
 
-button:after {
-  background-color: #111;
-  border-radius: 8px;
-  content: "";
-  display: block;
-  height: 48px;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  top: -2px;
-  transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
-  z-index: -1;
-}
-
-.button-56:hover:after, button:hover:after {
-  transform: translate(0, 0);
-}
-
-.button-56:active, button:active {
-  background-color: #ffdeda;
-  outline: 0;
-}
-
-.button-56:hover, button:hover {
-  outline: 0;
-}
-
-@media (min-width: 768px) {
-  .button-56 {
-    padding: 0 40px;
-  }
-}
-
-.button-56 a {
-  text-decoration: none;
-  color: white;
-}
-
 .dashboard-button-select {
   font-size: 32px;
   font-weight: 800;
   height: 70px;
-  box-shadow: 8px 8px black;
-  a {
-    color: rgb(243, 243, 243);
-    font-family: 'Nunito', sans-serif;
-  }
+  font-family: $mainfont;
   transition: box-shadow 0.3s ease;
-  background-color: #ff5555;
-  border: black solid 4px;
   margin-top: 20px;
 }
 
@@ -82,14 +32,10 @@ button:after {
   font-size: 32px;
   font-weight: 800;
   height: 70px;
-  box-shadow: 8px 8px black;
   a {
-    color: rgb(243, 243, 243);
-    font-family: 'Nunito', sans-serif;
+    font-family: $mainfont;
   }
   transition: box-shadow 0.3s ease;
-  background-color: #ff5555;
-  border: black solid 4px;
   margin-top: 20px;
 }
 
@@ -97,27 +43,17 @@ button:after {
   box-shadow: 0px 0px black;
 }
 
-.checkfriends {
-  font-size: 16px;
-}
-
 .letsgo-button {
   font-size: 40px;
   font-weight: 800;
   height: 10vh;
   font-family: 'Nunito', sans-serif;
-  box-shadow: 8px 8px black;
-  a {
-    color: rgb(243, 243, 243);
-  }
   transition: box-shadow 0.3s ease;
-  background-color: #ff5555;
-  border: black solid 4px;
   margin-top: 20px;
 }
 
 
-.letsgo-button:hover, .dashboard-button-select:hover, .dashboard-button-create:hover, .button:hover {
+.letsgo-button:hover, .dashboard-button-select:hover, .dashboard-button-create:hover, .button:hover, .login-button:hover, .signup-button:hover{
   box-shadow: 0px 0px black;
 }
 
@@ -127,12 +63,31 @@ button:after {
   font-weight: 800;
   height: 10vh;
   font-family: 'Nunito', sans-serif;
-  box-shadow: 8px 8px black;
-  a {
-    color: rgb(243, 243, 243);
-  }
   transition: box-shadow 0.3s ease;
-  background-color: #ff5555;
-  border: black solid 4px;
   margin-top: 20px;
+}
+
+
+.calendar-button {
+  font-size: 22px;
+  height: 70px;
+  width: 90%;
+  margin: 20px auto 20px auto;
+}
+
+.login-button {
+  width: 100%;
+  height: 46px;
+  transition: box-shadow 0.3s ease;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.signup-button {
+  width: 100%;
+  height: 46px;
+  transition: box-shadow 0.3s ease;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 30px !important;
 }
