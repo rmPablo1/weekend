@@ -9,7 +9,7 @@ class DashboardsController < ApplicationController
       @events = @events.or(friends_events)
     end
     # raise
-    @friends = Contact.all.where(sender: current_user)
+    @friends = current_user.following
   end
 
 

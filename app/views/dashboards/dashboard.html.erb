@@ -44,8 +44,8 @@
       <% @friends.each do |friend| %>
         <input
           type="checkbox"
-          name="friends[<%= friend.receiver.id %>]"/>
-        <label for="friends[<%= friend.receiver.id %>]" <%= friend.receiver.full_name %>> <%= friend.receiver.full_name%></label>
+          name="friends[<%= friend.id %>]"/>
+        <label for="friends[<%= friend.id %>]" <%= friend.full_name %>> <%= friend.full_name%></label>
       <% end %>
 
       <button type="submit">Check their calendar!</button>
