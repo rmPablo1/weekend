@@ -47,16 +47,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_27_090104) do
     t.index ["followerable_type", "followerable_id"], name: "index_followability_relationships_on_followerable"
   end
 
-  create_table "tokens", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "access_token"
-    t.string "refresh_token"
-    t.integer "expires_at"
-    t.string "provider"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false

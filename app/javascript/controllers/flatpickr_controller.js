@@ -7,15 +7,15 @@ export default class extends Controller {
   static targets = [ "startTime", "endTime" ]
 
   connect() {
-    flatpickr(this.startTimeTarget, {})
-    flatpickr(this.endTimeTarget, {})
     flatpickr(this.startTimeTarget, {
       enableTime: true,
       altInput: true,
+      defaultDate: this.startTimeTarget.value
     });
     flatpickr(this.endTimeTarget, {
       enableTime: true,
       altInput: true,
+      defaultDate: this.endTimeTarget.value
     });
   }
 }
