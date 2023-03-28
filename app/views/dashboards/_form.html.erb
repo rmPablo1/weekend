@@ -1,0 +1,17 @@
+<h2>ADD A FRIEND</h2>
+<form action="/friends" method="post">
+    <input type="text" name="email" placeholder="Write an email">
+    <input type="submit" value="ADD A FRIEND">
+</form>
+
+
+<h2>YOUR FRIENDS</h2>
+<% @friends.each do |friend| %>
+  <div><%= friend.full_name %><button><%= link_to("Delete", friend_path(friend), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" })%></button></div>
+<% end %>
+
+<h2>PENDING REQUESTS</h2>
+
+<% @friend_requests.each do |request|%>
+  <div><%= request.followerable.full_name %><button type="submit"><%= link_to("Accept", accept_request_path(request.followerable))%></button><button><%= link_to("Decline", friend_path(request.followerable), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" })%></button></div>
+<% end %>

@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
     @group = Group.new(strong_params)
     @group.user = current_user
     if @group.save
-      redirect_to groups_path
+      redirect_to friends_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -39,7 +39,7 @@ class GroupsController < ApplicationController
   def destroy
     @group = Group.find(params[:id])
     @group.destroy
-    redirect_to groups_path
+    redirect_to friends_path
   end
 
   private

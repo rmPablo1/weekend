@@ -1,0 +1,134 @@
+.container-profile{
+  width: 80vw;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  margin-top: 10vh;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  padding: 40px;
+  opacity: 0.9;
+  position: relative;
+}
+.fa-solid fa-trash {
+  padding:10px;
+}
+
+.edit-password-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color:  #E0C9F0;
+  border: none;
+
+}
+
+.submit-group {
+  width: auto;
+  height: auto;
+  background-color: #E0C9F0;
+}
+
+.friends-button {
+  background-color:  #E0C9F0;
+  width: auto;
+  height: auto;
+
+
+}
+
+.form-button{
+  background-color: #E0C9F0;
+}
+
+.edit-password-button:hover {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color:  #FFDC89;
+  border: none;
+
+}
+
+.welcome-profile {
+  text-align: center;
+  margin-bottom: 3vh;
+}
+.flex-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.your-friends {
+  margin-bottom: 5vh;
+}
+
+.add-div {
+  margin-bottom: 10vh;
+}
+
+.friend-div {
+  margin-right: 30px;
+}
+
+.pending-div {
+
+}
+
+.friend-vertical {
+ display: flex;
+ flex-direction: column;
+ position: relative;
+ overflow-y: scroll;
+ height: 30vh;
+
+}
+
+.friend-side {
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  & > a > i {
+    margin-bottom: 0;
+  }
+}
+
+.groupname {
+  margin-right: 10px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  & > a > i {
+    margin-bottom: 0;
+  }
+}
+
+.groupnameh {
+
+}
+
+.friends-popup1 {
+
+  overflow-y: scroll;
+  height: 100px;
+}
+
+.group-users {
+
+}
+
+.gu2 {
+  height: 25px;
+}
+
+.yg {
+  margin-bottom: 3vh;
+}
+
+.gb {
+  background-color: #E0C9F0;
+  width: auto;
+  height: auto;
+}

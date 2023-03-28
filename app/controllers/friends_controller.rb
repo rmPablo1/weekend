@@ -2,6 +2,8 @@ class FriendsController < ApplicationController
   def index
     @friends = current_user.followers
     @friend_requests = current_user.follow_requests
+    @groups = current_user.groups.includes(:users_groups)
+    @group = Group.new
   end
 
   def show #ACCEPT FRIEND LOGIC
