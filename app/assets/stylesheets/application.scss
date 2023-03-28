@@ -16,6 +16,7 @@
 body {
   margin: 0;
   min-height: 100vh;
+  overflow: hidden;
   font-family: $subfont;
 }
 
@@ -38,7 +39,7 @@ p, label {
 a {
   font-family: 'PT Sans', sans-serif;
   text-decoration: none;
-  color: black;
+  color: $shadow;
 }
 
 .cursor-pointer {
