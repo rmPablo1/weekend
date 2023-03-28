@@ -6,13 +6,28 @@
       <%= link_to t('simple_calendar.next', default: '>'), calendar.url_for_next_view %></h1>
     </div>
 
-    <div class="flexbox calendar-heading-right" data-controller="popup" >
-      <button class="dashboard-button-select orange" role="button" style="background-color=$orange" data-action="click->popup#open"> Select Friends </button>
-      <button class="dashboard-button-create"><%= link_to("Create event", new_event_path) %></button>
-      <div data-popup-target="box" class="d-none popupcontainer" ><%= render "/simple_calendar/select_friends_form" %></div>
+    <div class="flexbox calendar-heading-right" >
+      <div data-controller="popup">
+        <button class="dashboard-button-select orange" role="button" style="background-color=$orange" data-action="click->popup#open">Select Friends</button>
+        <div data-popup-target="popup" class="d-none popupcontainer select-friend">
+          <div class="close-button">
+            <i data-action="click->popup#close" class="fa-regular fa-circle-xmark"></i>
+          </div>
+          <%= render "/simple_calendar/select_friends_form" %>
+        </div>
+      </div>
 
+      <div data-controller="popup">
+        <button class="dashboard-button-create" role="button" data-action="click->popup#open">Create event!</button>
+        <div data-popup-target="popup" class="d-none popupcontainer create-event shadow-pop-br" >
+          <div class="close-button">
+            <i data-action="click->popup#close" class="fa-regular fa-circle-xmark"></i>
+          </div>
+          <%= render "form", event: @event %></div>
+      </div>
     </div>
   </div>
+
   <table class="table table-striped">
     <thead>
       <tr>
@@ -21,12 +36,17 @@
         <% end %>
       </tr>
     </thead>
-
-    <tbody>
+    <tbody >
       <% date_range.each_slice(7) do |week| %>
         <tr>
           <% week.each do |day| %>
-            <%= content_tag :td, class: calendar.td_classes_for(day) do %>
+            <%= content_tag :td, data: { controller: "popup", action: "click->popup#open"}, class: calendar.td_classes_for(day) do %>
+              <div data-popup-target="popup" class="d-none popupcontainer create-event shadow-pop-br" >
+                <div class="close-button">
+                  <i data-action="click->popup#close" class="fa-regular fa-circle-xmark"></i>
+                </div>
+                  <%= render "form", event: Event.new(start_time: day + 9.hour, end_time: day + 10.hour) %>
+              </div>
               <% if defined?(Haml) && respond_to?(:block_is_haml?) && block_is_haml?(passed_block) %>
                 <% capture_haml(day, sorted_events.fetch(day, []), &passed_block) %>
               <% else %>

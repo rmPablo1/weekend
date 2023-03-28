@@ -1,0 +1,8 @@
+<H2>Add a new event</H2>
+<%= simple_form_for [event], data: { controller: 'flatpickr' } do |f| %>
+
+  <%= f.input :start_time, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
+  <%= f.input :end_time, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
+  <%= f.input :summary %>
+  <div class="button"><%= f.submit "Create it!" %></div>
+<% end %>

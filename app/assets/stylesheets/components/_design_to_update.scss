@@ -42,9 +42,17 @@
 }
 
 .event {
-  background-color: $blue;
+  background: rgb(224,201,240);
+  background: linear-gradient(90deg, rgba(224,201,240,1) 0%, rgba(112,211,216,1) 100%);
   color: white;
+  margin: 5%;
   border: 1px solid rgb(59, 59, 59);
+  position: relative;
+}
+
+.event-username {
+  position: absolute;
+  top: 0;
 }
 
 .simple-calendar table {
