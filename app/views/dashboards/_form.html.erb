@@ -4,5 +4,6 @@
   <%= f.input :start_time, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
   <%= f.input :end_time, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
   <%= f.input :summary %>
-  <div class="button"><%= f.submit "Create it!" %></div>
+  <%= f.association :user, label_method: :full_name, label: "Friends to invite:", as: :check_boxes %>
+  <%= f.submit "Create it!", class:"purple_input" %>
 <% end %>
