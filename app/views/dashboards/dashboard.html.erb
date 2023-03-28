@@ -3,9 +3,9 @@
     <p class='open-icon cursor-pointer hidden' data-action="click->navbar-slider#open" data-navbar-slider-target="close">&#187;</p>
     <%= month_calendar(events: @events) do |date, events| %>
       <%= date.strftime("%d") %>
-      <% events.each do |event| %>
-        <div data-controller='event-hover' data-event-hover-events-value='<%= @eventarray %>' data-event-hover-friends-value='<%= @friendArray %>'>
-            <div class="event" data-action='mouseover->event-hover#show mouseout->event-hover#hide' data-event-hover-target='border'>
+      <% events.each_with_index do |event, index| %>
+        <% bg_color = event.user == current_user ? @user_color : @friends_colors[index] %>
+            <div class="event" data-controller='event-hover' data-event-hover-events-value='<%= @eventarray %>' style="background-color: <%= bg_color %>;" data-action='click->event-hover#show' data-event-hover-target='border' data-event-color-target='background'>
               <div class='event-username event-user-<%= event.user_id %>'><%= event.user.full_name %></div>
               <div class='hidden' data-event-hover-target='info'>
                 <div class='event-times'><%= event.summary %></div>
@@ -13,7 +13,6 @@
                 <div class='event-times'><i class="fa-solid fa-clock"></i ><%= event.end_time.strftime('%H') %></div>
               </div>
             </div>
-        </div>
       <% end %>
     <% end %>
   </div>

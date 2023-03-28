@@ -13,6 +13,9 @@
   td {
     border:1px solid $shadow;
     background-color: white;
+    padding: 0;
+    position: relative;
+    padding: 7px 7px 0 10px;
   }
   td:hover {
     // background-color: #ff6c6c;
@@ -42,7 +45,7 @@
 }
 
 .event {
-  background-color: $blue;
+
   color: $shadow;
   border: 1px solid rgb(59, 59, 59);
 }
