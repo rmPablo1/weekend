@@ -86,6 +86,7 @@ input[type=checkbox] {
 
 .create-event {
   position:fixed;
+  z-index: 9000;
   left: 50vw;
   top: 50vh;
   transform: translate(-50%,-50%);
@@ -129,6 +130,6 @@ input[type=checkbox] {
   justify-content: flex-end;
 }
 
-input {
+.purple_input {
   background-color: $purple;
 }
