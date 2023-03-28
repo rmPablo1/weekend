@@ -1,21 +1,21 @@
-<div class='dashboard-all' data-controller='navbar-slider popover event-hover'>
+<div class='dashboard-all' data-controller='navbar-slider popover'>
   <div class="dashboard-main-body" data-navbar-slider-target="mainbody">
     <p class='open-icon cursor-pointer hidden' data-action="click->navbar-slider#open" data-navbar-slider-target="close">&#187;</p>
     <%= month_calendar(events: @events) do |date, events| %>
       <%= date.strftime("%d") %>
       <% events.each do |event| %>
-        <div data-event-hover-target='box'>
-          <div class="event" data-action='mouseover->event-hover#show mouseout->event-hover#hide' data-event-hover-target='border'>
-            <div class='event-username event-user-<%= event.user_id %>'><%= event.user.full_name %></div>
-            <div class='event-times hidden' data-event-hover-target='info_1'><%= event.summary %></div>
-            <div class='event-times hidden' data-event-hover-target='info_2'><i class="fa-solid fa-clock"></i> <%= event.start_time.strftime('%H') %></div>
-            <div class='event-times hidden' data-event-hover-target='info_3'><i class="fa-solid fa-clock"></i ><%= event.end_time.strftime('%H') %></div>
-          </div>
+        <div data-controller='event-hover' data-event-hover-events-value='<%= @eventarray %>' data-event-hover-friends-value='<%= @friendArray %>'>
+            <div class="event" data-action='mouseover->event-hover#show mouseout->event-hover#hide' data-event-hover-target='border'>
+              <div class='event-username event-user-<%= event.user_id %>'><%= event.user.full_name %></div>
+              <div class='hidden' data-event-hover-target='info'>
+                <div class='event-times'><%= event.summary %></div>
+                <div class='event-times'><i class="fa-solid fa-clock"></i> <%= event.start_time.strftime('%H') %></div>
+                <div class='event-times'><i class="fa-solid fa-clock"></i ><%= event.end_time.strftime('%H') %></div>
+              </div>
+            </div>
         </div>
       <% end %>
     <% end %>
-
-
   </div>
   <div class="dashboard-navbar" data-navbar-slider-target="navbar">
   <p class="close-icon cursor-pointer" data-action="click->navbar-slider#close">x</p>

@@ -10,6 +10,8 @@ class DashboardsController < ApplicationController
     end
     # raise
     @friends = current_user.following
+    @eventarray = @events.map { |event| event.id }
+    @friendArray = @friends.map { |friend| friend.id}
   end
 
 
