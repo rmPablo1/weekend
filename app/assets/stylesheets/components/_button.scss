@@ -39,10 +39,6 @@ button {
   margin-top: 20px;
 }
 
-.letsgo-button:hover, .dashboard-button-select:hover, .dashboard-button-create:hover {
-  box-shadow: 0px 0px black;
-}
-
 .letsgo-button {
   font-size: 40px;
   font-weight: 800;
@@ -54,7 +50,7 @@ button {
 
 
 .letsgo-button:hover, .dashboard-button-select:hover, .dashboard-button-create:hover, .button:hover, .login-button:hover, .signup-button:hover{
-  box-shadow: 0px 0px black;
+  box-shadow: 0px 0px $shadow;
 }
 
 
@@ -62,7 +58,6 @@ button {
   font-size: 40px;
   font-weight: 800;
   height: 10vh;
-  font-family: 'Nunito', sans-serif;
   transition: box-shadow 0.3s ease;
   margin-top: 20px;
 }
@@ -73,6 +68,7 @@ button {
   height: 70px;
   width: 90%;
   margin: 20px auto 20px auto;
+  background-color: $purple;
 }
 
 .login-button {

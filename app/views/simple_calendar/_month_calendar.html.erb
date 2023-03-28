@@ -4,15 +4,27 @@
       <h1 class='no-margin month-selector'><%= link_to t('simple_calendar.previous', default: '<'), calendar.url_for_previous_view %>
       <span class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
       <%= link_to t('simple_calendar.next', default: '>'), calendar.url_for_next_view %></h1>
-      <p class='no-margin calendar-popup-text'>You haven't seen <span class ="random-friend cursor-pointer">Trevor</span> in a while!</p>
     </div>
 
-    <div class="flexbox calendar-heading-right" data-controller="popup" >
-      <button class="dashboard-button-select orange" role="button" style="background-color=$orange" data-action="click->popup#open">Select Friends</button>
-      <div data-popup-target="popup" class="d-none popupcontainer select-friend" ><i data-action="click->popup#clickOutside" class="fa-regular fa-circle-xmark"></i><%= render "/simple_calendar/select_friends_form" %> </div>
+    <div class="flexbox calendar-heading-right" >
+      <div data-controller="popup">
+        <button class="dashboard-button-select orange" role="button" style="background-color=$orange" data-action="click->popup#open">Select Friends</button>
+        <div data-popup-target="popup" class="d-none popupcontainer select-friend">
+          <div class="close-button">
+            <i data-action="click->popup#close" class="fa-regular fa-circle-xmark"></i>
+          </div>
+          <%= render "/simple_calendar/select_friends_form" %>
+        </div>
+      </div>
 
-      <button class="dashboard-button-create" role="button" data-action="click->popup#open">Create event!</button>
-      <div data-popup-target="popup" class="d-none popupcontainer create-event shadow-pop-br" ><%= render "form", event: @event %></div>
+      <div data-controller="popup">
+        <button class="dashboard-button-create" role="button" data-action="click->popup#open">Create event!</button>
+        <div data-popup-target="popup" class="d-none popupcontainer create-event shadow-pop-br" >
+          <div class="close-button">
+            <i data-action="click->popup#close" class="fa-regular fa-circle-xmark"></i>
+          </div>
+          <%= render "form", event: @event %></div>
+      </div>
     </div>
   </div>
 
@@ -24,12 +36,17 @@
         <% end %>
       </tr>
     </thead>
-    <tbody>
+    <tbody >
       <% date_range.each_slice(7) do |week| %>
         <tr>
           <% week.each do |day| %>
-            <%= content_tag :td, data: {controller: "popup", action: "click->popup#open"}, class: calendar.td_classes_for(day) do %>
-            <div data-popup-target="popup" class="d-none popupcontainer create-event shadow-pop-br" ><%= render "form", event: Event.new(start_time: day + 9.hour, end_time: day + 10.hour) %></div>
+            <%= content_tag :td, data: { controller: "popup", action: "click->popup#open"}, class: calendar.td_classes_for(day) do %>
+              <div data-popup-target="popup" class="d-none popupcontainer create-event shadow-pop-br" >
+                <div class="close-button">
+                  <i data-action="click->popup#close" class="fa-regular fa-circle-xmark"></i>
+                </div>
+                  <%= render "form", event: Event.new(start_time: day + 9.hour, end_time: day + 10.hour) %>
+              </div>
               <% if defined?(Haml) && respond_to?(:block_is_haml?) && block_is_haml?(passed_block) %>
                 <% capture_haml(day, sorted_events.fetch(day, []), &passed_block) %>
               <% else %>
