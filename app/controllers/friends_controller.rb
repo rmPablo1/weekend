@@ -4,11 +4,11 @@ class FriendsController < ApplicationController
     @friend_requests = current_user.follow_requests
   end
 
-  def show
+  def show #ACCEPT FRIEND LOGIC
     @friend_requester = User.find(params[:id])
-      current_user.accept_follow_request_of(@friend_requester)
-      current_user.send_follow_request_to(@friend_requester)
-      @friend_requester.accept_follow_request_of(current_user)
+    current_user.accept_follow_request_of(@friend_requester)
+    current_user.send_follow_request_to(@friend_requester)
+    @friend_requester.accept_follow_request_of(current_user)
     redirect_to friends_path
   end
 
@@ -16,6 +16,7 @@ class FriendsController < ApplicationController
     @user = User.find_by(email:params[:email])
     unless current_user.mutual_following_with?(@user)
       current_user.send_follow_request_to(@user)
+      redirect_to friends_path
     end
   end
 

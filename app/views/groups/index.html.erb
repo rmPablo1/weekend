@@ -1,0 +1,18 @@
+<h2>YOUR GROUPS</h2>
+<% @groups.each do |group| %>
+  <div><%= group.name %> <button><%= link_to("delete", group_path(group), data:{turbo_method: :delete, turbo_confirm:"Delete group?"}) %></button>
+    <% group.users_groups.each do |group_user| %>
+      <%= group_user.user.full_name %><button><%= link_to("Delete", users_group_path(group_user), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" })%></button><br>
+    <% end %>
+
+    <form action="/add" method="post">
+      <input type="hidden" id="group-id" name="group_id" value=<%=group.id%>>
+      <input type="text" placeholder="Write an email" name="email">
+      <input type="submit">
+    </form>
+  </div>
+<% end %>
+
+
+ <h2>CREATE A NEW GROUP</h2>
+ <%= render "form" %>
