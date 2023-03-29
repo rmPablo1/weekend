@@ -190,15 +190,6 @@ input[type=submit]{
 
 // HOMEPAGE STUFF
 
-.letsgo-button {
-  box-shadow: 8px 8px $shadow;
-  a {
-    color: black;
-  }
-  background-color: $yellow;
-  border: $shadow solid 2px;
-}
-
 .google-login {
   background-color:$green;
   border: 1px solid $shadow;
@@ -211,48 +202,8 @@ input[type=submit]{
   border-right: $shadow solid 2px
 }
 
-.homepage-right {
-  border-left: $shadow solid 2px;
-}
-
 .pic-home {
   box-shadow: 9px 9px rgba(0, 0, 0, 0.836);
-}
-
-.h1-home {
-  color: #1f2225;
-}
-
-.typed-text {
-  color: $pink;
-  text-shadow: 1px 1px 0 $shadow,
-  -2px 2px 0 $shadow,
-  2px -2px 0 $shadow,
-  -2px -2px 0 $shadow,
-  0px 2px 0 $shadow,
-  0px -2px 0 $shadow,
-  -2px 0px 0 $shadow,
-  2px 0px 0 $shadow,
-  3px 3px 0 $shadow,
-  -3px 3px 0 $shadow,
-  3px -3px 0 $shadow,
-  -3px -3px 0 $shadow,
-  0px 3px 0 $shadow,
-  0px -3px 0 $shadow,
-  -3px 0px 0 $shadow,
-  3px 0px 0 $shadow,
-  2px 3px 0 $shadow,
-  -2px 3px 0 $shadow,
-  2px -3px 0 $shadow,
-  -2px -3px 0 $shadow,
-  3px 2px 0 $shadow,
-  -3px 2px 0 $shadow,
-  3px -2px 0 $shadow,
-  -3px -2px 0 $shadow;
-}
-
-.phome {
-  color: #292F36;
 }
 
 body {
@@ -264,9 +215,4 @@ body {
 button {
   border: 1px solid $shadow;
   color: white;
-}
-
-
-body * {
-  border-radius: 0px !important;
 }

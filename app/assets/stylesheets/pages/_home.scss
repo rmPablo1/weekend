@@ -46,11 +46,43 @@
 
 .h1-home {
   font-weight: 800;
-  font-size: 40px;
+  font-size: 30px;
   padding: 0;
   margin-top: 0px;
   font-family: $mainfont;
-}
+  color: #1f2225;
+  }
+
+  .typed-text {
+    color: $pink;
+    text-shadow: 1px 1px 0 $shadow,
+    -2px 2px 0 $shadow,
+    2px -2px 0 $shadow,
+    -2px -2px 0 $shadow,
+    0px 2px 0 $shadow,
+    0px -2px 0 $shadow,
+    -2px 0px 0 $shadow,
+    2px 0px 0 $shadow,
+    3px 3px 0 $shadow,
+    -3px 3px 0 $shadow,
+    3px -3px 0 $shadow,
+    -3px -3px 0 $shadow,
+    0px 3px 0 $shadow,
+    0px -3px 0 $shadow,
+    -3px 0px 0 $shadow,
+    3px 0px 0 $shadow,
+    2px 3px 0 $shadow,
+    -2px 3px 0 $shadow,
+    2px -3px 0 $shadow,
+    -2px -3px 0 $shadow,
+    3px 2px 0 $shadow,
+    -3px 2px 0 $shadow,
+    3px -2px 0 $shadow,
+    -3px -2px 0 $shadow;
+      H1 {
+        font-size: 300px; // why does it don't work??
+      }
+  }
 
 .logo-home {
   width: 120px;
@@ -63,7 +95,7 @@
   font-weight: 700;
   font-size: 20px;
   margin-top: -40px;
-  font-family: $mainfont;
+  font-family: $subfont;
   margin-top: 5px;
 }
 
@@ -73,12 +105,35 @@
 }
 
 .instructions-block {
-  box-shadow: 8px 8px #3a3a3a;
+  border-radius: 3%;
+  box-shadow: 8px 8px #767676;
   background-color: white;
   width: 12vw;
   height: auto;
+  text-align: center;
 
-  p, h1 {
+  h1 {
     font-family: $mainfont;
   }
+
+}
+
+.letsgo-button {
+  box-shadow: 8px 8px $shadow;
+  font-size: 38px;
+  font-weight: 800;
+  height: 15vh;
+  font-family: $mainfont;
+  transition: box-shadow 0.3s ease;
+  padding: 20px;
+  line-height: 1;
+  a {
+    color: black;
+  }
+  background-color: $blue;
+  border: $shadow solid 2px;
+}
+
+.letsgo-button:hover, .dashboard-button-select:hover, .dashboard-button-create:hover, .button:hover, .login-button:hover, .signup-button:hover{
+  box-shadow: 0px 0px $shadow;
 }

@@ -30,23 +30,16 @@ body {
 a {
   text-decoration: none;
   color: $pink;
-  font-family: $subfont;
+  font-family: $mainfont;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Nunito', sans-serif;
+  font-family: $mainfont;
   padding: 0;
 }
 
 p, label {
-  font-family: 'PT Sans', sans-serif;
   padding: 0;
-}
-
-a {
-  font-family: 'PT Sans', sans-serif;
-  text-decoration: none;
-  color: $shadow;
 }
 
 .cursor-pointer {
