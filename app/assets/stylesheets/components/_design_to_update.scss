@@ -13,6 +13,9 @@
   td {
     border:1px solid $shadow;
     background-color: white;
+    padding: 0;
+    position: relative;
+    padding: 7px 7px 0 10px;
   }
   td:hover {
     // background-color: #ff6c6c;
@@ -42,9 +45,14 @@
 }
 
 .event {
-  background-color: $blue;
-  color: white;
+  color: $shadow;
   border: 1px solid rgb(59, 59, 59);
+  position: relative;
+}
+
+.event-username {
+  position: absolute;
+  top: 0;
 }
 
 .simple-calendar table {
@@ -185,9 +193,9 @@ input[type=submit]{
 .letsgo-button {
   box-shadow: 8px 8px $shadow;
   a {
-    color: rgb(243, 243, 243);
+    color: black;
   }
-  background-color: $green;
+  background-color: $yellow;
   border: $shadow solid 2px;
 }
 
@@ -199,17 +207,16 @@ input[type=submit]{
 }
 
 .homepage-left {
-  background-color: $pink;
+  background: rgba(244, 244, 244, 0.801);
   border-right: $shadow solid 2px
 }
 
 .homepage-right {
-  background-color: $green;
   border-left: $shadow solid 2px;
 }
 
 .pic-home {
-  box-shadow: 20px 20px rgba(0, 0, 0, 0.836);
+  box-shadow: 9px 9px rgba(0, 0, 0, 0.836);
 }
 
 .h1-home {
@@ -217,7 +224,7 @@ input[type=submit]{
 }
 
 .typed-text {
-  color: $green;
+  color: $pink;
   text-shadow: 1px 1px 0 $shadow,
   -2px 2px 0 $shadow,
   2px -2px 0 $shadow,

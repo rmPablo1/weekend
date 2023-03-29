@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :groups, dependent: :destroy
 
   has_many :events
+  has_many :invitations
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:google_oauth2]
