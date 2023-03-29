@@ -1,0 +1,233 @@
+.container-profile{
+  width: 90vw;
+  height:80vh;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  margin-top: 10vh;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  padding: 40px;
+  opacity: 0.9;
+  position: relative;
+  justify-content: space-between;
+}
+.fa-solid fa-trash {
+  padding:10px;
+}
+
+.row {
+  gap: 0vw;
+}
+
+.verticle-line {
+  border-right: 4px solid black;
+  display: block;
+  height: 80%;
+}
+
+.imagefriend {
+  width: 10vw;
+  height: auto;
+  position: absolute;
+  top: -14px;
+  right: 20px;
+}
+
+.friendly {
+  position: absolute;
+  left: 52px;
+  bottom: 18px;
+  background-color:  #E0C9F0;
+  border: #3a3a3a solid 2px;
+  box-shadow: 5px 5px #3a3a3a;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.inputfriend {
+  border: #3a3a3a solid 2px;
+  box-shadow: 5px 5px #3a3a3a;
+  margin-bottom: 1vh;
+}
+
+.submit-group {
+  width: auto;
+  height: auto;
+  background-color: #E0C9F0;
+}
+
+.friends-button {
+  background-color:  #E0C9F0;
+  width: auto;
+  height: auto;
+  border: #3a3a3a solid 2px;
+  box-shadow: 5px 5px #3a3a3a
+
+}
+
+.friendtext {
+  color: black;
+  margin-bottom: 9vh;
+  border-bottom: 3px solid $blue;
+  width: 80%;
+  margin-bottom: 30px;
+
+}
+
+.form-button{
+  background-color: #E0C9F0;
+}
+
+.edit-password-button:hover {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color:  #FFDC89;
+  border: none;
+
+}
+
+.welcome-profile {
+  text-align: center;
+  margin-bottom: 3vh;
+}
+.flex-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.friendly {
+  background-color: #E0C9F0;
+  width: auto;
+  height: auto;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+
+}
+
+.your-friends {
+  margin-bottom: 5vh;
+  width: 100%;
+}
+
+.add-div {
+
+  margin-bottom: 7vh;
+}
+
+.friend-div {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color:  #E0C9F0;
+  border: none;
+}
+
+.friendnname {
+  margin: 0;
+}
+
+.pending-div {
+  margin-bottom: 7vh;
+  background-color: white;
+  border: #3a3a3a solid 2px;
+  box-shadow: 5px 5px #3a3a3a;
+  height: 100%;
+  padding: 12px;
+  position: relative;
+}
+
+.friend-vertical {
+ display: flex;
+ flex-direction: column;
+ position: relative;
+ overflow-y: scroll;
+ height: 40vh;
+ width: 100%;
+ margin-bottom: 2vh;
+}
+
+
+
+.group-vertical {
+overflow-y: scroll;
+
+margin-bottom: 4vh;
+
+}
+
+.friend-side {
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  & > a > i {
+    margin-bottom: 0;
+  }
+}
+
+.groupname {
+  margin-right: 10px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  & > a > i {
+    margin-bottom: 0;
+  }
+}
+
+.groupnameh {
+margin-top: 2vh;
+color: $blue;
+}
+
+.friends-popup1 {
+
+  overflow-y: scroll;
+  height: 100px;
+}
+
+.gu2 {
+  height: 25px;
+}
+
+.yg {
+  margin-bottom: 3vh;
+}
+
+.gb {
+  background-color: #E0C9F0;
+  width: auto;
+  height: auto;
+}
+
+.bin {
+ // align-self: flex-end;
+height: 14px;
+display: flex;
+align-items: center;
+}
+
+.yourfriends {
+  background-color: white;
+  border: #3a3a3a solid 2px;
+  box-shadow: 5px 5px #3a3a3a;
+  padding: 12px;
+}
+
+.scrolly {
+  overflow-y: scroll;
+  background-color: white;
+  border: #3a3a3a solid 2px;
+  box-shadow: 5px 5px #3a3a3a;
+  padding: 12px;
+
+}
+
+.cg {
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+}

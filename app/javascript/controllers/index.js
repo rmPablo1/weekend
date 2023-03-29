@@ -7,6 +7,8 @@ import { application } from "./application"
 import EventHoverController from "./event_hover_controller"
 application.register("event-hover", EventHoverController)
 
+import FriendsController from "./friends_controller"
+application.register("friends", FriendsController)
 import FlatpickrController from "./flatpickr_controller"
 application.register("flatpickr", FlatpickrController)
 
@@ -21,6 +23,9 @@ application.register("navbar-slider", NavbarSliderController)
 
 import PopupController from "./popup_controller"
 application.register("popup", PopupController)
+
+import ProfilepopupController from "./profilepopup_controller"
+application.register("profilepopup", ProfilepopupController)
 
 import SliderController from "./slider_controller"
 application.register("slider", SliderController)
