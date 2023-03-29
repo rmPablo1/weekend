@@ -1,76 +1,68 @@
 
 <div class="container-profile">
-<div>
+      <div>
        <h3 class="friendtext">Hi <%= current_user.full_name if user_signed_in? %> </h3>
       </div>
+    <%= image_tag("logo.png", class: "imagefriend") %>
   <div class="container-friend">
     <div class="row">
 
-    <div class="col-12 col-lg-3">
+    <div class="col-12 col-lg-4 ">
 
       <div class="pending-div" >
           <h3>Pending Requests</h3>
           <% @friend_requests.each do |request|%>
             <div><%= request.followerable.full_name %><button type="submit"><%= link_to("Accept", accept_request_path(request.followerable))%></button><button><%= link_to("Decline", friend_path(request.followerable), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" })%></button></div>
           <% end %>
-      </div>
           <%= button_to "Edit password", edit_user_password_path, class: "navbutton button friendly"%>
           <% if current_user %>
           <% end %>
-    </div>
-
-    <div class="col-12 col-lg-3">
-
-      <div class="add-div">
-        <h3>Add a Friend</h3>
-        <%= render "form" %>
-      </div>
-      <div class="cg">
-        <h3>Create a Group</h3>
-        <%= render "groups/form" %>
       </div>
 
-    </div>
+
+      </div>
 
 
 
 
-    <div class="col-12 col-lg-3 scrolly">
+
+    <div class="col-12 col-lg-4 scrolly">
       <h3 class="yg">Your Groups</h3>
-      <div class="friend-vertical group-vertical">
+      <div class="group-vertical" style="height: 40vh;">
           <% @groups.each do |group| %>
               <div class="friend-side">
                 <h4 class="groupnameh"><%= group.name %></h4>  <%= link_to friend_path(group), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
-                    <i class="fa-solid fa-trash" style="color: #051023;"></i>
+                    <i class="fa-solid fa-x" style="color: #183568;"></i>
                     <% end %>
               </div>
-              <div class="friend-vertical">
+              <div class="group-vertical">
                 <% group.users_groups.each do |group_user| %>
                   <div class="friend-side">
                   <%= group_user.user.full_name %><%= link_to friend_path(group_user), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
-                    <i class="fa-solid fa-trash" style="color: #051023;"></i>
+                    <i class="fa-solid fa-x" style="color: #183568;"></i>
                     <% end %>
                   </div>
               <% end %>
               </div>
               <form action="/add" method="post">
                 <input type="hidden" id="group-id" name="group_id" value=<%=group.id%>>
-                <input type="text" placeholder="Add an email address" name="email">
+                <input type="text" placeholder="Add a friend" name="email">
                 <input type="submit" class="button gb">
               </form>
 
         <% end %>
       </div>
+      <%= render "groups/form" %>
     </div>
 
-      <div class="col-12 col-lg-3 yourfriends">
+      <div class="col-12 col-lg-4 yourfriends">
         <h3 class="your-friends">Your Friends</h3>
           <div class="friend-vertical" data-controller="profilepopup">
           <% @friends.each do |friend| %>
             <div class="friend-side">
               <p class="friendnname"><%= friend.full_name %></p>
               <%= link_to friend_path(friend), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
-              <i class="fa-solid fa-trash" style="color: #051023;"></i>
+              <i class="fa-solid fa-x" style="color: #183568;"></i>
             <% end %>
             </div>
           <% end %>
@@ -80,7 +72,7 @@
 
 
         </div>
-
+<%= render "form" %>
       </div>
 
     </div>
