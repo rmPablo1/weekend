@@ -57,4 +57,3 @@ class DashboardsController < ApplicationController
   def set_params
     params.require(:event).permit(:start_time, :end_time, :summary)
   end
-end
