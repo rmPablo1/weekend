@@ -1,14 +1,34 @@
 <div class='homepage'>
   <div class='homepage-left'>
     <%= image_tag "logo.png", class: "logo-home" %>
-    <h1 class="h1-home">Plan your <span data-controller="typed-js" class='typed-text'></h1>
+    <h1 class="h1-home">Plan your
+    <br>
+    <span data-controller="typed-js" class='typed-text'></h1>
+
     <p class="phome">We believe that the stress of making plans shouldn’t be a barrier to spending time with those that mean the most.  Get your community on board and easily sync calendars, send invites, and plan events and enjoy your weekend.</p>
+    <div class="instruction-blocks">
+      <div class="instructions-block">
+        <H1>1.</H1>
+        <p>Import your calendar</p>
+      </div>
+      <div class="instructions-block">
+        <H1>2.</H1>
+        <p>Choose which friends to hang out with</p>
+      </div>
+    </div>
     <div class="images-home">
-      <%= image_tag "1.png", class: "picshome" %>
-      <%= image_tag "2.png", class: "picshome" %>
+      <%# <%= image_tag "1.png", class: "picshome" %>
+      <%# <%= image_tag "2.png", class: "picshome" %>
     </div>
     <button class="letsgo-button" role="button"> <%= link_to "Start making plans", @start_link %> </button>
   </div>
   <div class='homepage-right'>
     <%= image_tag "rave.png", class: "pic-home" %>
+    <div class='leaf1'></div>
+    <div class='leaf2'></div>
+    <div class='leaf3'></div>
+    <div class='leaf4'></div>
+    <div class='leaf5'></div>
+    <div class='leaf6'></div>
+    <div class='leaf7'></div>
   </div>
