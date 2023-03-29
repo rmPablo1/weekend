@@ -1,0 +1,41 @@
+.create-events-labels{
+  margin:0 auto !important;
+  text-align: center;
+  font-size: 30px;
+  width:100%;
+}
+
+.create-events-labels:hover{
+  cursor: pointer;
+  background-color: #FFABAB;
+}
+
+.form-check{
+  padding:0px !important;
+}
+
+.form-check-input{
+  display:none;
+}
+
+.form-check-input:checked ~ label{
+  background-color: #FFABAB
+}
+
+
+.input-friends{
+  display:none;
+}
+.input-friends ~ label{
+  width:100%;
+  padding-left: 5px;
+}
+
+.input-friends ~ label:hover{
+  background-color: #70D3D8;
+  cursor:pointer;
+}
+
+.input-friends:checked ~ label{
+  background-color: #70D3D8
+}

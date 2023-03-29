@@ -3,7 +3,7 @@
 
   <%= f.input :start_time, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
   <%= f.input :end_time, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
-  <%= f.input :summary %>
-  <%= f.association :user, label_method: :full_name, label: "Friends to invite:", as: :check_boxes %>
+  <%= f.input :summary, placeholder: "Type it!" %>
+  <%= f.association :user, collection: current_user.followers, label_method: :full_name, label: "Friends to invite:", as: :check_boxes, item_label_class: 'create-events-labels' %>
   <%= f.submit "Create it!", class:"purple_input" %>
 <% end %>

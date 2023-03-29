@@ -9,7 +9,6 @@ class DashboardsController < ApplicationController
     if params[:friends]
       friends_events = Event.where(start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week).where(user_id: params[:friends].keys)
       @events = @events.or(friends_events)
-
       @friends_colors = ["#70D3D8", "#E0C9F0", "#FFDC89", "#8AB7FF", '#FFABAB'].sample(params[:friends].keys.size)
     elsif params[:groups]
       @selected_groups = Group.where(id: params[:groups].keys)
@@ -17,10 +16,13 @@ class DashboardsController < ApplicationController
       @selected_groups.each do |group|
         group.users.each do |user|
           user.events.each do |event|
-            if event.start_time.between?(start_date.beginning_of_month.beginning_of_week, start_date.end_of_month.end_of_week)
-              groups_events << event
+            unless event.nil?
+              if event.start_time.between?(start_date.beginning_of_month.beginning_of_week, start_date.end_of_month.end_of_week)
+                groups_events << event
+              end
             end
           end
+          @friends_colors = ["#70D3D8", "#E0C9F0", "#FFDC89", "#8AB7FF", '#FFABAB'].sample(params[:groups].keys.size)
         end
       end
       unless groups_events.nil?
@@ -32,5 +34,4 @@ class DashboardsController < ApplicationController
     @friend_requests_counter = current_user.follow_requests.count if current_user.follow_requests.count.positive?
     @eventarray = @events.map { |event| event.id }
   end
-
 end
