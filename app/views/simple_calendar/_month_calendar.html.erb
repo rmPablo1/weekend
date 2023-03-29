@@ -41,7 +41,7 @@
         <tr>
           <% week.each do |day| %>
             <%= content_tag :td, data: { controller: "popup", action: "click->popup#open"}, class: calendar.td_classes_for(day) do %>
-              <div data-popup-target="popup" class="d-none popupcontainer create-event shadow-pop-br" >
+              <div class="d-none popupcontainer create-event shadow-pop-br" >
                 <div class="close-button">
                   <i data-action="click->popup#close" class="fa-regular fa-circle-xmark"></i>
                 </div>

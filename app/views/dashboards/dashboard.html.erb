@@ -8,9 +8,9 @@
             <div class="event" data-controller='event-hover' data-event-hover-events-value='<%= @eventarray %>' style="background-color: <%= bg_color %>;" data-action='click->event-hover#show' data-event-hover-target='border' data-event-color-target='background'>
               <div class='event-username event-user-<%= event.user_id %>'><%= event.user.full_name[0..10] %></div>
               <div class='hidden' data-event-hover-target='info'>
-                <div class='event-times'><%= event.summary %></div>
-                <div class='event-times'><i class="fa-solid fa-clock"></i> <%= event.start_time.strftime('%H') %></div>
-                <div class='event-times'><i class="fa-solid fa-clock"></i ><%= event.end_time.strftime('%H') %></div>
+                <div class='event-times'>Title: <%= event.summary %></div>
+                <div class='event-times'>Start <i class="fa-solid fa-clock"></i>: <%= event.start_time.strftime('%H') %></div>
+                <div class='event-times'>End <i class="fa-solid fa-clock"></i >: <%= event.end_time.strftime('%H') %></div>
               </div>
             </div>
       <% end %>
