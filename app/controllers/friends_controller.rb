@@ -14,9 +14,11 @@ class FriendsController < ApplicationController
 
   def create
     @user = User.find_by(email:params[:email])
-    unless current_user.mutual_following_with?(@user)
-      current_user.send_follow_request_to(@user)
-      redirect_to friends_path
+    if @user
+      unless current_user.mutual_following_with?(@user)
+        current_user.send_follow_request_to(@user)
+        redirect_to friends_path
+      end
     end
   end
 

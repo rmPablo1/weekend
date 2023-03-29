@@ -1,15 +1,27 @@
 
 <form action="<%= dashboard_path %>" method="get" >
     <ul>
+    <h5>Friends</h5>
     <% @friends.each do |friend| %>
     <% if current_user.mutual_following_with?(friend) %>
       <li><input
         type="checkbox"
         name="friends[<%= friend.id %>]"/>
-      <label for="friends[<%= friend.id %>]" <%= friend.full_name %>> <%= friend.full_name%></label>
+      <label for="friends[<%= friend.id %>]" <%= friend.full_name %>> <%= friend.full_name%></label></li>
       <% end %>
     <% end %>
-    </li>
+    <h5>Groups</h5>
+
+    <% unless @groups.empty? %>
+      <% @groups.each do |group| %>
+      <li>
+      <input
+        type="checkbox"
+        name="groups[<%= group.id %>]"/>
+      <label for="groups[<%= group.id %>]" <%= group.name %>></label>
+      </li>
+      <% end %>
+    <% end %>
     </ul>
     <button type="submit" class="button calendar-button">Check their calendars!</button>
 </form>
