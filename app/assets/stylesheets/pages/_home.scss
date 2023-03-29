@@ -3,8 +3,7 @@
 }
 
 .homepage-left {
-  border-right: $shadow solid 2px; //with or without??
-  background: rgba(244, 244, 244, 0.801);
+  // background: rgba(244, 244, 244, 0.6);
   padding: 0 40px;
   display: flex;
   flex-direction: column;
@@ -26,7 +25,6 @@
 .pic-home {
   width: 80%;
   height: auto;
-  border-radius: 20px;
   transition: width 0.5s ease;
   box-shadow: 9px 9px rgba(0, 0, 0, 0.836);
 }
@@ -42,11 +40,11 @@
 
 .h1-home {
   font-weight: 800;
-  font-size: 40%;
+  font-size: 55%;
   padding: 0;
   margin-top: 0px;
   font-family: $mainfont;
-  color: #1f2225;
+  color: $shadow;
   }
 
   .typed-text {
@@ -79,7 +77,7 @@
   }
 
 .logo-home {
-  width: 120px;
+  width: 300px;
   height: auto;
   align-items: center;
   margin-left: -5%;
@@ -101,32 +99,20 @@
 
 .instruction-block {
   position: relative;
-  border-radius: 3%;
-  box-shadow: 8px 8px #767676;
-  background-color: white;
+  background-color: $green;
   width: 60%;
   height: auto;
-  padding: 30px;
+  padding: 20px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   // width: fit-content;
-
-  .circle {
-    background-color: $purple;
-    border-radius: 100%;
-    color: white;
-    width: 10vh;
-    height: 10vh;
-    position: absolute;
-    top: -50%;
-    left: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
+  margin-top: -50px;
+  font-size: 22px;
+  font-weight: bold;
+  color: $shadow;
+  border: 2px solid $shadow;
 }
 
 .button-homepage {
@@ -139,13 +125,14 @@
   box-shadow: 8px 8px $shadow;
   font-size: 38px;
   font-weight: 800;
-  height: 15vh;
-  font-family: $mainfont;
+  height: 10vh;
+  width: 20vw;
   transition: box-shadow 0.3s ease;
   padding: 20px;
   line-height: 1;
   a {
-    color: black;
+    color: $shadow;
+    font-family: $mainfont;
   }
   background-color: $blue;
   border: $shadow solid 2px;
@@ -153,6 +140,7 @@
 
 .letsgo-button:hover, .dashboard-button-select:hover, .dashboard-button-create:hover, .button:hover, .login-button:hover, .signup-button:hover{
   box-shadow: 0px 0px $shadow;
+  border: none;
 }
 
 

@@ -49,11 +49,7 @@
   border: 1px solid rgb(59, 59, 59);
   position: relative;
   margin-bottom:3px !important;
-}
-
-.event-username {
-  position: absolute;
-  top: 0;
+  cursor: pointer;
 }
 
 .simple-calendar table {
@@ -143,13 +139,18 @@
 }
 
 .form-control {
-  height: 30px;
+  height: 40px;
   border: $shadow solid 2px;
   box-shadow: 5px 5px $shadow;
+  border-radius: none !important;
+}
+
+.btn {
+  border-radius: none !important;
 }
 
 input[type=submit]{
-  color: white;
+  color:$shadow;
 }
 
 .signup-form input[type=submit]{
@@ -166,4 +167,20 @@ input[type=submit]{
 
 .google-logo {
   background: white;
+}
+
+.create-events-label {
+  color: $shadow;
+}
+
+.popupcontainer h2 {
+  font-weight: bold;
+}
+
+.form-header {
+  margin-bottom: 20px;
+}
+
+.form-check-label {
+  cursor: pointer;
 }
