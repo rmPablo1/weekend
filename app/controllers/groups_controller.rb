@@ -19,14 +19,16 @@ class GroupsController < ApplicationController
   end
 
   def add
-    if current_user.email != params[:email] && current_user.mutual_following_with?(User.find_by(email:params[:email]))
-      @group = Group.find(params[:group_id])
-      @user = User.find_by(email:params[:email])
-      @users_group = UsersGroup.new(group:@group, user: @user)
-      if @users_group.save!
-        redirect_to groups_path
-      else
-        render :new, status: :unprocessable_entity
+    if User.find(email:params[:email])
+      if current_user.email != params[:email] && current_user.mutual_following_with?(User.find_by(email:params[:email]))
+        @group = Group.find(params[:group_id])
+        @user = User.find_by(email:params[:email])
+        @users_group = UsersGroup.new(group:@group, user: @user)
+        if @users_group.save!
+          redirect_to groups_path
+        else
+          render "new", status: :unprocessable_entity
+        end
       end
     end
   end

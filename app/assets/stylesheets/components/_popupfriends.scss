@@ -131,6 +131,11 @@ input[type=checkbox] {
   justify-content: flex-end;
 }
 
+.close-button i:hover{
+  color: #FFABAB;
+  cursor:pointer;
+}
+
 .purple_input {
   background-color: $purple;
 }

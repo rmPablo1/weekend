@@ -48,7 +48,12 @@
   color: $shadow;
   border: 1px solid rgb(59, 59, 59);
   position: relative;
-  padding: 0;
+  margin-bottom:3px !important;
+}
+
+.event-username {
+  position: absolute;
+  top: 0;
 }
 
 .simple-calendar table {
@@ -159,6 +164,7 @@
 }
 
 .form-control {
+  height: 30px;
   border: $shadow solid 2px;
   box-shadow: 5px 5px $shadow;
 }
