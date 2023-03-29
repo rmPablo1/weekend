@@ -2,12 +2,20 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="popup"
 export default class extends Controller {
-  static targets = ["box"]
+  static targets = ["popup"]
   connect() {
-    // console.log(this.boxTarget)
-    // console.log("3")
+    console.log(this.popupTarget);
   }
+
   open() {
-    this.boxTarget.classList.toggle("d-none")
+    console.log("open")
+    this.popupTarget.classList.remove("d-none");
+  }
+
+  close(event) {
+    // example to close a modal
+    console.log("close")
+    event.stopImmediatePropagation()
+    this.popupTarget.classList.add("d-none");
   }
 }

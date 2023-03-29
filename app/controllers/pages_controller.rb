@@ -2,7 +2,6 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home, :create_events ]
   skip_before_action :verify_authenticity_token
 
-
   def home
     if user_signed_in?
       redirect_to dashboard_path
