@@ -193,9 +193,9 @@ input[type=submit]{
 .letsgo-button {
   box-shadow: 8px 8px $shadow;
   a {
-    color: rgb(243, 243, 243);
+    color: black;
   }
-  background-color: $green;
+  background-color: $yellow;
   border: $shadow solid 2px;
 }
 
@@ -207,17 +207,16 @@ input[type=submit]{
 }
 
 .homepage-left {
-  background-color: $pink;
+  background: rgba(244, 244, 244, 0.801);
   border-right: $shadow solid 2px
 }
 
 .homepage-right {
-  background-color: $green;
   border-left: $shadow solid 2px;
 }
 
 .pic-home {
-  box-shadow: 20px 20px rgba(0, 0, 0, 0.836);
+  box-shadow: 9px 9px rgba(0, 0, 0, 0.836);
 }
 
 .h1-home {
@@ -225,7 +224,7 @@ input[type=submit]{
 }
 
 .typed-text {
-  color: $green;
+  color: $pink;
   text-shadow: 1px 1px 0 $shadow,
   -2px 2px 0 $shadow,
   2px -2px 0 $shadow,

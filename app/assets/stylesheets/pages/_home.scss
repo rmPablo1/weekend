@@ -46,9 +46,10 @@
 
 .h1-home {
   font-weight: 800;
-  font-size: 60px;
+  font-size: 40px;
   padding: 0;
   margin-top: 0px;
+  font-family: $mainfont;
 }
 
 .logo-home {
@@ -60,6 +61,24 @@
 
 .phome {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   margin-top: -40px;
+  font-family: $mainfont;
+  margin-top: 5px;
+}
+
+.instruction-blocks {
+  display:flex;
+  gap: 30px;
+}
+
+.instructions-block {
+  box-shadow: 8px 8px #3a3a3a;
+  background-color: white;
+  width: 12vw;
+  height: auto;
+
+  p, h1 {
+    font-family: $mainfont;
+  }
 }
