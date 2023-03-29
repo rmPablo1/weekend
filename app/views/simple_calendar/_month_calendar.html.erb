@@ -23,7 +23,7 @@
           <div class="close-button">
             <i data-action="click->popup#close" class="fa-regular fa-circle-xmark"></i>
           </div>
-          <%= render "form", event: @event %></div>
+          <%= render "dashboards/form", event: Event.new %></div>
       </div>
     </div>
   </div>
@@ -45,7 +45,7 @@
                 <div class="close-button">
                   <i data-action="click->popup#close" class="fa-regular fa-circle-xmark"></i>
                 </div>
-                  <%= render "form", event: Event.new(start_time: day + 9.hour, end_time: day + 10.hour) %>
+                  <%= render "dashboards/form", event: Event.new(start_time: day + 9.hour, end_time: day + 10.hour) %>
               </div>
               <% if defined?(Haml) && respond_to?(:block_is_haml?) && block_is_haml?(passed_block) %>
                 <% capture_haml(day, sorted_events.fetch(day, []), &passed_block) %>

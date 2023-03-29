@@ -11,12 +11,9 @@ class EventsController < ApplicationController
         next if user_id == ""
         event = Event.new(set_params)
         event.user = User.find(user_id)
-        event.save!
-        # invitation = Invitation.new
-        # invitation.event = event
-        # invitation.user = User.find(user_id)
-        # invitation.save!
+        event.save
       end
+      raise
       redirect_to dashboard_path
     else
       render "new", status: :unprocessable_entity
