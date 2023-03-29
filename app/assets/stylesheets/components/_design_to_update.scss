@@ -142,27 +142,6 @@
   box-shadow: 5px 5px $shadow;
 }
 
-.login-form-side {
-  background-color: $green;
-  border-right: solid $shadow 4px;
-}
-
-.signup-form-side {
-  background-color: $pink;
-}
-
-.login-form-box {
-  border: $shadow solid 2px;
-  background-color: $pink;
-  box-shadow: 20px 20px $shadow;
-}
-
-.signup-form-box {
-  border: $shadow solid 2px;
-  background-color: $green;
-  box-shadow: 20px 20px $shadow;
-}
-
 .form-control {
   height: 30px;
   border: $shadow solid 2px;
@@ -178,97 +157,13 @@ input[type=submit]{
 }
 
 .login-form input[type=submit]{
-  background-color: $green;
+  background-color: $blue;
 }
 
 .form-check-input:checked {
-  background-color: $green !important;
+  background-color: $blue !important;
 }
 
 .google-logo {
   background: white;
-}
-
-
-// HOMEPAGE STUFF
-
-.letsgo-button {
-  box-shadow: 8px 8px $shadow;
-  a {
-    color: black;
-  }
-  background-color: $yellow;
-  border: $shadow solid 2px;
-}
-
-.google-login {
-  background-color:$green;
-  border: 1px solid $shadow;
-  box-shadow: 5px 5px $shadow;
-  color: white;
-}
-
-.homepage-left {
-  background: rgba(244, 244, 244, 0.801);
-  border-right: $shadow solid 2px
-}
-
-.homepage-right {
-  border-left: $shadow solid 2px;
-}
-
-.pic-home {
-  box-shadow: 9px 9px rgba(0, 0, 0, 0.836);
-}
-
-.h1-home {
-  color: #1f2225;
-}
-
-.typed-text {
-  color: $pink;
-  text-shadow: 1px 1px 0 $shadow,
-  -2px 2px 0 $shadow,
-  2px -2px 0 $shadow,
-  -2px -2px 0 $shadow,
-  0px 2px 0 $shadow,
-  0px -2px 0 $shadow,
-  -2px 0px 0 $shadow,
-  2px 0px 0 $shadow,
-  3px 3px 0 $shadow,
-  -3px 3px 0 $shadow,
-  3px -3px 0 $shadow,
-  -3px -3px 0 $shadow,
-  0px 3px 0 $shadow,
-  0px -3px 0 $shadow,
-  -3px 0px 0 $shadow,
-  3px 0px 0 $shadow,
-  2px 3px 0 $shadow,
-  -2px 3px 0 $shadow,
-  2px -3px 0 $shadow,
-  -2px -3px 0 $shadow,
-  3px 2px 0 $shadow,
-  -3px 2px 0 $shadow,
-  3px -2px 0 $shadow,
-  -3px -2px 0 $shadow;
-}
-
-.phome {
-  color: #292F36;
-}
-
-body {
-  // background-color: rgb(233, 242, 246);
-  // background-color: #ffffff;
-  background: rgb(244, 244, 244);
-}
-
-button {
-  border: 1px solid $shadow;
-  color: white;
-}
-
-
-body * {
-  border-radius: 0px !important;
 }

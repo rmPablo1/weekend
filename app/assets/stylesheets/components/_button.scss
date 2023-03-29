@@ -1,6 +1,5 @@
 button {
   align-items: center;
-  border-radius: 8px;
   cursor: pointer;
   display: flex;
   font-family: $subfont;
@@ -39,21 +38,6 @@ button {
   margin-top: 20px;
   font-family: $mainfont;
   color: $shadow;
-}
-
-.letsgo-button {
-  font-size: 38px;
-  font-weight: 800;
-  height: 10vh;
-  font-family: 'Nunito', sans-serif;
-  transition: box-shadow 0.3s ease;
-  margin-top: 20px;
-  padding-top: 13px;
-}
-
-
-.letsgo-button:hover, .dashboard-button-select:hover, .dashboard-button-create:hover, .button:hover, .login-button:hover, .signup-button:hover{
-  box-shadow: 0px 0px $shadow;
 }
 
 
