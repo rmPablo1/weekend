@@ -2,7 +2,6 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home, :create_events ]
   skip_before_action :verify_authenticity_token
 
-
   def home
     if user_signed_in?
       redirect_to dashboard_path
@@ -14,15 +13,11 @@ class PagesController < ApplicationController
     puts "printing the params!!!!"
 
     params[:result][:items].each do |event|
-      puts "here is the start date"
-      puts event[:start]
-      puts "----------------------------------------"
-      store_event = Event.new(summary: event[:summary], google_event_id: event[:id], start_time: event[:start].values.first, end_time: event[:end].values.first, user: current_user)
+      store_event = Event.new(summary: event[:summary], google_event_id: rand, start_time: event[:start].values.first, end_time: event[:end].values.first, user: current_user)
       unless Event.where(google_event_id: event[:id]).exists?
-        store_event.save!
-      else
-        puts "The event already exists!"
+        store_event.save
       end
     end
+    render json: {status: "ok"}
   end
 end

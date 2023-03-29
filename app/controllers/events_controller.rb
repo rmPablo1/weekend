@@ -7,10 +7,24 @@ class EventsController < ApplicationController
     event = Event.new(set_params)
     event.user = current_user
     if event.save!
+      params[:event][:user_id].each do |user_id|
+        next if user_id == ""
+
+        event = Event.new(set_params)
+        event.user = User.find(user_id)
+        event.save
+        raise
+      end
       redirect_to dashboard_path
     else
       render "new", status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    redirect_to dashboard_path
   end
 
   private

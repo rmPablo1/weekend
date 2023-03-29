@@ -31,6 +31,9 @@
 .login-signup {
   display: flex;
   flex-direction: row;
+  a {
+    color: $blue;
+  }
 }
 
 .login-form-side {
@@ -53,6 +56,26 @@
   overflow: hidden;
 }
 
+.form-boxes {
+  border: $shadow solid 2px;
+  background: rgba(244, 244, 244, 0.801);
+  border: 2px solid #3a3a3a;
+  box-shadow: 9px 9px #3a3a3a;
+  min-width: 20vw;
+  max-width: 35vw;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding: 15px;
+  height: fit-content;
+}
+
+.signup-slider {
+  color: $blue;
+  margin: 20px 0 20px 0;
+}
 
 .logo-login {
   height: auto;

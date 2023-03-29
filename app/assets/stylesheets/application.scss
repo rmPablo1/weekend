@@ -7,11 +7,23 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
 @import "simple_calendar";
+@import "flatpickr/dist/flatpickr.css";
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
 @import 'pages/login';
+
+form {
+  display: block;
+  margin-top: 0em;
+  justify-content: center;
+}
+
+p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
 
 body {
   margin: 0;
@@ -27,19 +39,12 @@ a {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Nunito', sans-serif;
+  font-family: $mainfont;
   padding: 0;
 }
 
 p, label {
-  font-family: 'PT Sans', sans-serif;
   padding: 0;
-}
-
-a {
-  font-family: 'PT Sans', sans-serif;
-  text-decoration: none;
-  color: $shadow;
 }
 
 .cursor-pointer {

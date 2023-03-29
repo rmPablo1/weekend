@@ -1,17 +1,9 @@
-<h2>ADD A FRIEND</h2>
-<form action="/friends" method="post">
-    <input type="text" name="email" placeholder="Write an email">
-    <input type="submit" value="ADD A FRIEND">
-</form>
+<H2>Add a new event</H2>
+<%= simple_form_for [event], data: { controller: 'flatpickr' } do |f| %>
 
-
-<h2>YOUR FRIENDS</h2>
-<% @friends.each do |friend| %>
-  <div><%= friend.full_name %><button><%= link_to("Delete", friend_path(friend), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" })%></button></div>
-<% end %>
-
-<h2>PENDING REQUESTS</h2>
-
-<% @friend_requests.each do |request|%>
-  <div><%= request.followerable.full_name %><button type="submit"><%= link_to("Accept", accept_request_path(request.followerable))%></button><button><%= link_to("Decline", friend_path(request.followerable), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" })%></button></div>
+  <%= f.input :start_time, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
+  <%= f.input :end_time, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
+  <%= f.input :summary, placeholder: "Type it!" %>
+  <%= f.association :user, collection: current_user.followers, label_method: :full_name, label: "Friends to invite:", as: :check_boxes, item_label_class: 'create-events-labels' %>
+  <%= f.submit "Create it!", class:"purple_input" %>
 <% end %>

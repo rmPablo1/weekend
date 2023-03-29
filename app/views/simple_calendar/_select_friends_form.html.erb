@@ -1,15 +1,32 @@
 
 <form action="<%= dashboard_path %>" method="get" >
+    <div class="overflow-on-form">
     <ul>
+    <h4><strong>Friends</strong></h4>
     <% @friends.each do |friend| %>
     <% if current_user.mutual_following_with?(friend) %>
       <li><input
         type="checkbox"
-        name="friends[<%= friend.id %>]"/>
-      <label for="friends[<%= friend.id %>]" <%= friend.full_name %>> <%= friend.full_name%></label>
+        name="friends[<%= friend.id %>]"
+        class="input-friends"
+        id="friends[<%= friend.id %>]"/>
+      <label for="friends[<%= friend.id %>]" <%= friend.full_name %>> <%= friend.full_name%></label></li>
       <% end %>
     <% end %>
-    </li>
+    <h4><strong>Groups</strong></h4>
+
+    <% unless @groups.empty? %>
+      <% @groups.each do |group| %>
+      <li>
+      <input
+        type="checkbox"
+        name="groups[<%= group.id %>]"
+        class="input-friends"
+        id="groups[<%= group.id %>]"/>
+      <label for="groups[<%= group.id %>]"> <%= group.name %></label></li>
+      <% end %>
+    <% end %>
     </ul>
-    <button type="submit" class="button calendar-button">Check their calendars!</button>
+    </div>
+    <button type="submit" class="button calendar-button select-friends-button">Check their calendars!</button>
 </form>
