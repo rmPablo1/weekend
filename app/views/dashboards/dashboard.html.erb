@@ -1,21 +1,20 @@
-<div class='dashboard-all' data-controller='navbar-slider popover event-hover'>
+<div class='dashboard-all' data-controller='navbar-slider popover'>
   <div class="dashboard-main-body" data-navbar-slider-target="mainbody">
     <p class='open-icon cursor-pointer hidden' data-action="click->navbar-slider#open" data-navbar-slider-target="close">&#187;</p>
     <%= month_calendar(events: @events) do |date, events| %>
       <%= date.strftime("%d") %>
-      <% events.each do |event| %>
-        <div data-event-hover-target='box'>
-          <div class="event" data-action='mouseover->event-hover#show mouseout->event-hover#hide' data-event-hover-target='border'>
-            <div class='event-username event-user-<%= event.user_id %>'><%= event.user.full_name %></div>
-            <div class='event-times hidden' data-event-hover-target='info_1'><%= event.summary %></div>
-            <div class='event-times hidden' data-event-hover-target='info_2'><i class="fa-solid fa-clock"></i> <%= event.start_time.strftime('%H') %></div>
-            <div class='event-times hidden' data-event-hover-target='info_3'><i class="fa-solid fa-clock"></i ><%= event.end_time.strftime('%H') %></div>
-          </div>
-        </div>
+      <% events.each_with_index do |event, index| %>
+        <% bg_color = event.user == current_user ? @user_color : @friends_colors[index] %>
+            <div class="event" data-controller='event-hover' data-event-hover-events-value='<%= @eventarray %>' style="background-color: <%= bg_color %>;" data-action='click->event-hover#show' data-event-hover-target='border' data-event-color-target='background'>
+              <div class='event-username event-user-<%= event.user_id %>'><%= event.user.full_name %></div>
+              <div class='hidden' data-event-hover-target='info'>
+                <div class='event-times'>Title: <%= event.summary %></div>
+                <div class='event-times'>Start <i class="fa-solid fa-clock"></i>: <%= event.start_time.strftime('%H') %></div>
+                <div class='event-times'>End <i class="fa-solid fa-clock"></i >: <%= event.end_time.strftime('%H') %></div>
+              </div>
+            </div>
       <% end %>
     <% end %>
-
-
   </div>
   <div class="dashboard-navbar" data-navbar-slider-target="navbar">
   <p class="close-icon cursor-pointer" data-action="click->navbar-slider#close">x</p>
@@ -190,21 +189,23 @@
               console.log("THIS IS THE DATA")
               console.log(data)
           })
+            .then(data => window.location.reload())
+
         } catch (err) {
-          document.getElementById('content').innerText = err.message;
+          //document.getElementById('content').innerText = err.message;
           return;
         }
 
         const events = response.result.items;
         if (!events || events.length == 0) {
-          document.getElementById('content').innerText = 'No events found.';
+          //document.getElementById('content').innerText = 'No events found.';
           return;
         }
         // Flatten to string to display
         const output = events.reduce(
             (str, event) => `${str}${event.summary} (${event.start.dateTime || event.start.date})\n`,
             'Events:\n');
-        document.getElementById('content').innerText = output;
+        //document.getElementById('content').innerText = output;
       }
     </script>
     <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
