@@ -137,27 +137,6 @@
   box-shadow: 5px 5px $shadow;
 }
 
-.login-form-side {
-  background-color: $green;
-  border-right: solid $shadow 4px;
-}
-
-.signup-form-side {
-  background-color: $pink;
-}
-
-.login-form-box {
-  border: $shadow solid 2px;
-  background-color: $pink;
-  box-shadow: 20px 20px $shadow;
-}
-
-.signup-form-box {
-  border: $shadow solid 2px;
-  background-color: $green;
-  box-shadow: 20px 20px $shadow;
-}
-
 .form-control {
   border: $shadow solid 2px;
   box-shadow: 5px 5px $shadow;
@@ -172,43 +151,13 @@ input[type=submit]{
 }
 
 .login-form input[type=submit]{
-  background-color: $green;
+  background-color: $blue;
 }
 
 .form-check-input:checked {
-  background-color: $green !important;
+  background-color: $blue !important;
 }
 
 .google-logo {
   background: white;
-}
-
-
-// HOMEPAGE STUFF
-
-.google-login {
-  background-color:$green;
-  border: 1px solid $shadow;
-  box-shadow: 5px 5px $shadow;
-  color: white;
-}
-
-.homepage-left {
-  background: rgba(244, 244, 244, 0.801);
-  border-right: $shadow solid 2px
-}
-
-.pic-home {
-  box-shadow: 9px 9px rgba(0, 0, 0, 0.836);
-}
-
-body {
-  // background-color: rgb(233, 242, 246);
-  // background-color: #ffffff;
-  background: rgb(244, 244, 244);
-}
-
-button {
-  border: 1px solid $shadow;
-  color: white;
 }

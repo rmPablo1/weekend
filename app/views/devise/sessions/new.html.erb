@@ -1,8 +1,8 @@
 <div class="login-signup"  data-controller='slider'>
   <div class="login-form-side">
-     <div class='login-form-box'>
-      <%= image_tag('logo.png', class:"logo-login")  %>
-      <h1 class="form-header">Your weekend starts here!</h1>
+    <%= image_tag('logo.png', class:"logo-login")  %>
+    <div class='form-boxes'>
+      <h1 class="form-header">Your Weekend starts here!</h1>
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }, html: { class: "login-form" }) do |f| %>
         <div class="form-inputs">
             <%= f.input :email,
@@ -15,7 +15,7 @@
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
         </div>
         <div class="form-actions">
-          <%= f.button :submit, "Log in", class: "login-button" %>
+          <%= f.button :submit, "Make plans!", class: "login-button" %>
           <% end %>
           <%= render "devise/shared/links"%>
           <p class='signup-slider'>Don't have an account? <span data-action="click->slider#right" class="cursor-pointer"><span class='bold-text'>Sign up!</span></span></p>
@@ -23,11 +23,21 @@
      </div>
   </div>
   <div class="signup-form-side">
-    <div class='signup-form-box'>
+    <div class='form-boxes'>
       <%= image_tag('logo.png', class:"logo-login")  %>
       <%= render "devise/registrations/new" %>
-      <img class='login-photo undraggable unselectable' data-slider-target="loginphoto" src='https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80'>
+      <img class='login-photo undraggable unselectable' data-slider-target="loginphoto" src='https://images.pexels.com/photos/6760874/pexels-photo-6760874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'>
         </div>
     </div>
-    <img class='signup-photo undraggable unselectable' data-slider-target="signupphoto" src='https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1415&q=80'>
+    <img class='signup-photo undraggable unselectable' data-slider-target="signupphoto" src='https://images.pexels.com/photos/6760874/pexels-photo-6760874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'>
 </div>
+
+<div class='homepage-right'>
+    <div class='leaf1'></div>
+    <div class='leaf2'></div>
+    <div class='leaf3'></div>
+    <div class='leaf4'></div>
+    <%# <div class='leaf5'></div> %>
+    <div class='leaf6'></div>
+    <div class='leaf7'></div>
+  </div>

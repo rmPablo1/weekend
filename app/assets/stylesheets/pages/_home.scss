@@ -2,20 +2,9 @@
   display:flex;
 }
 
-.images-home {
-  display:flex;
-  gap: 30px;
-  img {
-    width: 13vw;
-    height: auto;
-    box-shadow: 10px 10px $shadow;
-    border: #292F36 solid 5px;
-    border-radius: 7px;
-    background-color: rgb(243, 243, 243);
-  }
-}
-
 .homepage-left {
+  border-right: $shadow solid 2px; //with or without??
+  background: rgba(244, 244, 244, 0.801);
   padding: 0 40px;
   display: flex;
   flex-direction: column;
@@ -23,6 +12,7 @@
   align-items: flex-start;
   width: 35vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .homepage-right {
@@ -38,15 +28,21 @@
   height: auto;
   border-radius: 20px;
   transition: width 0.5s ease;
+  box-shadow: 9px 9px rgba(0, 0, 0, 0.836);
 }
 
 .pic-home:hover {
   width: 90%;
 }
 
+.typed-title {
+  width: fit-content;
+  font-size: 90px;
+}
+
 .h1-home {
   font-weight: 800;
-  font-size: 30px;
+  font-size: 40%;
   padding: 0;
   margin-top: 0px;
   font-family: $mainfont;
@@ -55,6 +51,7 @@
 
   .typed-text {
     color: $pink;
+    font-size: 110%;
     text-shadow: 1px 1px 0 $shadow,
     -2px 2px 0 $shadow,
     2px -2px 0 $shadow,
@@ -79,52 +76,63 @@
     -3px 2px 0 $shadow,
     3px -2px 0 $shadow,
     -3px -2px 0 $shadow;
-      H1 {
-        font-size: 300px; // why does it don't work??
-      }
   }
 
 .logo-home {
   width: 120px;
   height: auto;
   align-items: center;
-  margin-top: 30px;
+  margin-left: -5%;
+  margin-top: -5%;
 }
 
 .phome {
-  font-weight: 700;
   font-size: 20px;
-  margin-top: -40px;
   font-family: $subfont;
-  margin-top: 5px;
-}
-
-.circle {
-  background-color: black;
-  border-radius: 50%;
-
-  .h1 {
-    color: white;
-  }
+  margin-top: 5%;
 }
 
 .instruction-blocks {
   display:flex;
   gap: 30px;
+  margin-top: 15%;
+  margin-bottom: 15%;
 }
 
-.instructions-block {
+.instruction-block {
+  position: relative;
   border-radius: 3%;
   box-shadow: 8px 8px #767676;
   background-color: white;
-  width: 12vw;
+  width: 60%;
   height: auto;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  // width: fit-content;
 
-  h1 {
-    font-family: $mainfont;
+  .circle {
+    background-color: $purple;
+    border-radius: 100%;
+    color: white;
+    width: 10vh;
+    height: 10vh;
+    position: absolute;
+    top: -50%;
+    left: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
+}
+
+.button-homepage {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .letsgo-button {
@@ -145,4 +153,12 @@
 
 .letsgo-button:hover, .dashboard-button-select:hover, .dashboard-button-create:hover, .button:hover, .login-button:hover, .signup-button:hover{
   box-shadow: 0px 0px $shadow;
+}
+
+
+.google-login {
+  background-color:#4285F4;
+  border: 1px solid $shadow;
+  box-shadow: 5px 5px $shadow;
+  color: white;
 }
