@@ -48,11 +48,7 @@
   color: $shadow;
   border: 1px solid rgb(59, 59, 59);
   position: relative;
-}
-
-.event-username {
-  position: absolute;
-  top: 0;
+  padding: 0;
 }
 
 .simple-calendar table {
