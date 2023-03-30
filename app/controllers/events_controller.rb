@@ -4,16 +4,11 @@ class EventsController < ApplicationController
   end
 
   def create
-    event = Event.new(set_params)
-    event.user = current_user
-
-    if event.save!
+    if add_event_current_user(set_params).save!
       params[:event][:user_id].each do |user_id|
         next if user_id == ""
 
-        event = Event.new(set_params)
-        event.user = User.find(user_id)
-        event.save
+        add_event_different_user(set_params, user_id)
       end
 
       redirect_to controller: "dashboards", action: "dashboard", start_date: params[:event][:start_time].to_datetime
@@ -30,7 +25,21 @@ class EventsController < ApplicationController
 
   private
 
+  def add_event_different_user(set_params, user_id)
+    event = Event.new(set_params)
+    event.user = User.find(user_id)
+    event.google_event_id = rand
+    event.save!
+  end
+
+  def add_event_current_user(set_params)
+    event = Event.new(set_params)
+    event.user = current_user
+    event.google_event_id = rand
+    return event
+  end
+
   def set_params
-    params.require(:event).permit(:start_time, :end_time, :summary)
+    params.require(:event).permit(:start_time, :end_time, :summary, :google_event_id)
   end
 end
