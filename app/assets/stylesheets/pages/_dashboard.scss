@@ -280,3 +280,25 @@
     color: $shadow;
   }
 }
+
+.friend-button-noti {
+  position: relative;
+}
+
+.notification-icon {
+  position: absolute;
+  background-color: $pink;
+  border-radius: 50% !important;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid $shadow;
+  z-index: 5;
+  right: -10px;
+  top: 20px;
+  p {
+    font-family: bold;
+  }
+}
