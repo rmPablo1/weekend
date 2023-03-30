@@ -4,8 +4,8 @@
     <%= month_calendar(events: @events) do |date, events| %>
       <%= date.strftime("%d") %>
       <% events.each_with_index do |event, index| %>
-        <% bg_color = event.user == current_user ? @user_color : @friends_colors[index] %>
-            <div class="event" data-controller='event-hover' data-event-hover-events-value='<%= @eventarray %>' style="background-color: <%= bg_color %>;" data-action='click->event-hover#show' data-event-hover-target='border' data-event-color-target='background'>
+        <% bg_color = event.user == current_user ? @user_color : @friends_colors[@friends.index(event.user)] %>
+            <div class="event" data-controller='event-hover' data-event-hover-events-value='<%= @eventarray %>' style="background-color: <%= bg_color %> !important;" data-action='click->event-hover#show' data-event-hover-target='border' data-event-color-target='background'>
               <div class='event-username event-user-<%= event.user_id %>'><%= event.user.full_name[0..10] %></div>
               <div class='hidden' data-event-hover-target='info'>
                 <div class='event-times'>Title: <%= event.summary %></div>

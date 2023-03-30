@@ -1,6 +1,7 @@
 .simple-calendar .today {
-  // background-color: #7dd5e0
-  background-color: $purple;
+  background-color: white !important;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .simple-calendar {
@@ -19,7 +20,7 @@
   }
   td:hover {
     // background-color: #ff6c6c;
-    background-color: $yellow;
+    border: 5px solid $pink;
   }
 }
 
@@ -50,6 +51,7 @@
   position: relative;
   margin-bottom:3px !important;
   cursor: pointer;
+  background-color: white;
 }
 
 .simple-calendar table {
