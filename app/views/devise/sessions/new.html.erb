@@ -1,7 +1,7 @@
 <div class="login-signup"  data-controller='slider'>
   <div class="login-form-side">
-    <%= image_tag('logo.png', class:"logo-login")  %>
     <div class='form-boxes'>
+      <%= image_tag('logo.png', class:"logo-login")  %>
       <h1 class="form-header">Your Weekend starts here!</h1>
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }, html: { class: "login-form" }) do |f| %>
         <div class="form-inputs">

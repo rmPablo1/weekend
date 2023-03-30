@@ -7,6 +7,7 @@
   z-index: 5;
   transform: translate(0, 0);
   transition: transform 1.3s ease;
+  border-left: solid $shadow 2px;
 }
 
 .signup-photo {
@@ -18,6 +19,7 @@
   z-index: 5;
   transform: translate(-100vw, 0);
   transition: transform 1.3s ease;
+  border-right: solid $shadow 2px;
 }
 
 .login-photo-transformed {
@@ -32,7 +34,7 @@
   display: flex;
   flex-direction: row;
   a {
-    color: $blue;
+    color: $shadow;
   }
 }
 
@@ -58,7 +60,7 @@
 
 .form-boxes {
   border: $shadow solid 2px;
-  background: rgba(244, 244, 244, 0.801);
+  background: rgba(244, 244, 244, 0.6);
   border: 2px solid #3a3a3a;
   box-shadow: 9px 9px #3a3a3a;
   min-width: 20vw;
@@ -67,18 +69,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
   padding: 15px;
   height: fit-content;
 }
 
 .signup-slider {
-  color: $blue;
-  margin-top: 20px;
-}
+  color: $shadow;
+  margin: 20px 0 20px 0;
 
-.form-label {
-  margin-bottom: 0;
 }
 
 .logo-login {
