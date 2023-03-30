@@ -7,9 +7,13 @@ export default class extends Controller {
     console.log(this.popupTarget);
   }
 
-  open() {
+  open(event) {
     console.log("open")
-    this.popupTarget.classList.remove("d-none");
+    console.log(event.target)
+    console.log("3")
+    if (event.target.tagName == "TD" || event.target.tagName == "BUTTON") {
+      this.popupTarget.classList.remove("d-none");
+    }
   }
 
   close(event) {

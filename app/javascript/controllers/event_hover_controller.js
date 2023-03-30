@@ -9,9 +9,11 @@ export default class extends Controller {
     console.log('event hover connected!')
   }
 
-  show() {
-    this.infoTarget.classList.toggle('hidden')
-    this.borderTarget.classList.toggle('beeble2')
+  show(event) {
+    if (event.target.tagName == "DIV") {
+      this.infoTarget.classList.toggle('hidden')
+      this.borderTarget.classList.toggle('beeble2')
+    }
   }
 
     // hide() {
