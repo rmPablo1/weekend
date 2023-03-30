@@ -1,5 +1,5 @@
-
 <div class="container-profile">
+<%= button_to "Dashboard", root_path, method: :get, class: "navbutton button friendy" %>
       <div>
        <h3 class="friendtext">Hi <%= current_user.full_name if user_signed_in? %> </h3>
       </div>
@@ -28,7 +28,7 @@
               <form action="/add" method="post">
                 <input type="hidden" id="group-id" name="group_id" value=<%=group.id%>>
                 <input type="text" placeholder=" Add a friend" name="email">
-                <input type="submit" class="button gb">
+                <input type="submit" value="Add" class="button gb">
               </form>
 
         <% end %>
@@ -55,13 +55,16 @@
       <div class="pending-div" >
           <h3 class='pg'>Pending Requests</h3>
           <% @friend_requests.each do |request|%>
-           <div><%= request.followerable.full_name %>
-           <%= link_to accept_request_path(request.followerable) do %>
-              <i class="fa-regular fa-check" style="color: #254274;"></i>
+           <div class="request-text">
+            <%= request.followerable.full_name %>
+           <div>
+            <%= link_to accept_request_path(request.followerable) do %>
+              <i>✔️</i>
             <% end %>
             <%= link_to friend_path(request.followerable), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
               <i class="fa-solid fa-x" style="color: #183568;"></i>
             <% end %>
+            </div>
            </div>
           <% end %>
             <%#= button_to "Edit passwor", edit_user_password_path, class: "navbutton button friendly"%>
