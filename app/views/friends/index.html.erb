@@ -12,14 +12,14 @@
       <div class="group-vertical" style="height: 40vh;">
           <% @groups.each do |group| %>
               <div class="friend-side">
-                <h4 class="groupnameh"><%= group.name %></h4>  <%= link_to friend_path(group), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+                <h4 class="groupnameh"><%= group.name %></h4>  <%= link_to group_path(group), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
                     <i class="fa-solid fa-x" style="color: #183568;"></i>
                     <% end %>
               </div>
               <div class="group-vertical">
                 <% group.users_groups.each do |group_user| %>
                   <div class="friend-side">
-                  <%= group_user.user.full_name %><%= link_to friend_path(group_user), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+                  <%= group_user.user.full_name %><%= link_to users_group_path(group_user), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
                     <i class="fa-solid fa-x" style="color: #183568;"></i>
                     <% end %>
                   </div>
@@ -27,7 +27,7 @@
               </div>
               <form action="/add" method="post">
                 <input type="hidden" id="group-id" name="group_id" value=<%=group.id%>>
-                <input type="text" placeholder="Add a friend" name="email">
+                <input type="text" placeholder=" Add a friend" name="email">
                 <input type="submit" class="button gb">
               </form>
 
@@ -47,11 +47,6 @@
             <% end %>
             </div>
           <% end %>
-
-
-
-
-
         </div>
           <%= render "form" %>
       </div>
@@ -67,26 +62,13 @@
           <% end %>
 
       </div>
-
-
     </div>
     </div>
 
 
   </div>
-
-
-
-
   <div class="container">
   <div class="row">
-
-
-
-
-
-
-
   </div>
 </div>
 

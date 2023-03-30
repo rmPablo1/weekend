@@ -227,6 +227,13 @@ font-family: $subfont;
   font-family: $altfont;
   width: auto;
   height: auto;
+  box-shadow: 3px 3px $shadow !important;
+  transition: box-shadow 0.3s ease;
+}
+
+.gb:hover {
+  box-shadow: none !important;
+  border: none;
 }
 
 .bin {
@@ -270,4 +277,25 @@ align-items: center;
 
 .row {
   --bs-gutter-x: 0 !important;
+}
+
+.gbutton1 {
+  font-family:  $altfont !important;
+  border: 2px solid $shadow;
+  box-shadow: 3px 3px $shadow;
+  transition: box-shadow 0.3s ease;
+  background-color: $blue;
+  height: 40px;
+  font-weight: bold;
+}
+
+.gbutton1:hover {
+  border:none;
+  box-shadow: none;
+}
+
+
+.new_group {
+  margin: 0 0 15px 15px;
+  display: flex
 }
