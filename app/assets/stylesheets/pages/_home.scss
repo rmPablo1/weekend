@@ -3,7 +3,7 @@
 }
 
 .homepage-left {
-  // background: rgba(244, 244, 244, 0.6);
+  background: rgba(244, 244, 244, 0.6);
   padding: 0 40px;
   display: flex;
   flex-direction: column;
@@ -99,7 +99,7 @@
 
 .instruction-block {
   position: relative;
-  background-color: $green;
+  background: rgba(244, 244, 244, 0.6);
   width: 60%;
   height: auto;
   padding: 20px 30px;
