@@ -19,17 +19,13 @@ class GroupsController < ApplicationController
   end
 
   def add
-    if User.find_by(email:params[:email])
-      if current_user.email != params[:email] && current_user.mutual_following_with?(User.find_by(email:params[:email]))
-        @group = Group.find(params[:group_id])
-        @user = User.find_by(email:params[:email])
-        @users_group = UsersGroup.new(group:@group, user: @user)
-        if @users_group.save!
-          redirect_to friends_path
-        else
-          render "new", status: :unprocessable_entity
-        end
-      end
+    @user = User.find_by(email: params[:email])
+    return unless @user && check_validation(params[:email])
+
+    if users_group_save(params[:group_id], params[:email]).save!
+      redirect_to friends_path
+    else
+      render "new", status: :unprocessable_entity
     end
   end
 
@@ -45,6 +41,18 @@ class GroupsController < ApplicationController
   end
 
   private
+
+  def check_validation(email_user)
+    # if both conditions don't match, it won't return true
+    current_user.email != email_user && current_user.mutual_following_with?(User.find_by(email: email_user))
+  end
+
+  def users_group_save(group, email_user)
+    @group = Group.find(group)
+    @user = User.find_by(email: email_user)
+    @users_group = UsersGroup.new(group: @group, user: @user)
+  end
+
   def strong_params
     params.require(:group).permit(:name)
   end

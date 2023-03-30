@@ -6,7 +6,9 @@ class FriendsController < ApplicationController
     @group = Group.new
   end
 
-  def show #ACCEPT FRIEND LOGIC
+  # ACCEPT FRIEND LOGIC
+
+  def show
     @friend_requester = User.find(params[:id])
     current_user.accept_follow_request_of(@friend_requester)
     current_user.send_follow_request_to(@friend_requester)
@@ -16,11 +18,9 @@ class FriendsController < ApplicationController
 
   def create
     @user = User.find_by(email:params[:email])
-    if @user
-      unless current_user.mutual_following_with?(@user)
-        current_user.send_follow_request_to(@user)
-        redirect_to friends_path
-      end
+    if @user && !current_user.mutual_following_with?(@user)
+      current_user.send_follow_request_to(@user)
+      redirect_to friends_path
     end
   end
 
