@@ -18,6 +18,7 @@
   gap: 0vw;
 }
 
+
 .verticle-line {
   border-right: 4px solid black;
   display: block;
@@ -25,11 +26,12 @@
 }
 
 .imagefriend {
-  width: 10vw;
+  width: 15vw;
   height: auto;
   position: absolute;
-  top: -14px;
+  top: -54px;
   right: 20px;
+  z-index: 5;
 }
 
 .friendly {
@@ -52,20 +54,20 @@
 .submit-group {
   width: auto;
   height: auto;
-  background-color: #E0C9F0;
+  background-color: white;
 }
 
 .friends-button {
-  background-color:  #E0C9F0;
+  background-color: $yellow;
   width: auto;
   height: auto;
-  border: #3a3a3a solid 2px;
-  box-shadow: 5px 5px #3a3a3a
-
+  border: $shadow solid 2px;
+  box-shadow: 3px 3px $shadow;
+  font-family: $altfont;
 }
 
 .friendtext {
-  color: black;
+  color: $shadow;
   margin-bottom: 9vh;
   border-bottom: 3px solid $blue;
   width: 80%;
@@ -94,11 +96,11 @@
   justify-content: flex-end;
 }
 .friendly {
-  background-color: #E0C9F0;
+  background-color: $blue;
   width: auto;
   height: auto;
-  color: white;
-  font-family: 'Nunito', sans-serif;
+  color: $shadow;
+  font-family:  $altfont;
 
 }
 
@@ -126,7 +128,7 @@
 
 .pending-div {
   margin-bottom: 7vh;
-  background-color: white;
+  background-color: $yellow;
   border: #3a3a3a solid 2px;
   box-shadow: 5px 5px #3a3a3a;
   height: 100%;
@@ -179,7 +181,7 @@ margin-bottom: 4vh;
 
 .groupnameh {
 margin-top: 2vh;
-color: $blue;
+color: $shadow;
 }
 
 .friends-popup1 {
@@ -197,7 +199,8 @@ color: $blue;
 }
 
 .gb {
-  background-color: #E0C9F0;
+  background-color: $yellow;
+  font-family: $altfont;
   width: auto;
   height: auto;
 }
@@ -210,7 +213,7 @@ align-items: center;
 }
 
 .yourfriends {
-  background-color: white;
+  background-color: $pink;
   border: #3a3a3a solid 2px;
   box-shadow: 5px 5px #3a3a3a;
   padding: 12px;
@@ -218,7 +221,7 @@ align-items: center;
 
 .scrolly {
   overflow-y: scroll;
-  background-color: white;
+  background-color: $blue;
   border: #3a3a3a solid 2px;
   box-shadow: 5px 5px #3a3a3a;
   padding: 12px;
@@ -228,4 +231,8 @@ align-items: center;
 .cg {
   margin-top: 7vh;
   margin-bottom: 7vh;
+}
+
+.pending-box {
+  background-color: $yellow;
 }
