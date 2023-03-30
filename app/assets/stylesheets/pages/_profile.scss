@@ -15,8 +15,9 @@
 }
 
 .row {
-  gap: 0vw;
+  gap: 2%;
 }
+
 
 .verticle-line {
   border-right: 4px solid black;
@@ -28,8 +29,9 @@
   width: 10vw;
   height: auto;
   position: absolute;
-  top: -14px;
-  right: 20px;
+  top: -50px;
+  right: 40px;
+  z-index: 5;
 }
 
 .friendly {
@@ -44,33 +46,37 @@
 }
 
 .inputfriend {
-  border: #3a3a3a solid 2px;
-  box-shadow: 5px 5px #3a3a3a;
-  margin-bottom: 1vh;
+  border: #3a3a3a solid 3px;
+  margin-bottom: 15px;
+  margin-left: 25px;
+  width: 75%;
+  height: 36px;
+  margin-right: 10px;
 }
 
 .submit-group {
   width: auto;
   height: auto;
-  background-color: #E0C9F0;
+  background-color: white;
 }
 
 .friends-button {
-  background-color:  #E0C9F0;
+  background-color: $blue;
   width: auto;
   height: auto;
-  border: #3a3a3a solid 2px;
-  box-shadow: 5px 5px #3a3a3a
-
+  border: $shadow solid 2px;
+  box-shadow: 3px 3px $shadow;
+  font-family: $altfont;
 }
 
 .friendtext {
-  color: black;
+  color: $shadow;
   margin-bottom: 9vh;
   border-bottom: 3px solid $blue;
   width: 80%;
   margin-bottom: 30px;
-
+  font-size: 42px;
+  font-weight: bold;
 }
 
 .form-button{
@@ -94,17 +100,19 @@
   justify-content: flex-end;
 }
 .friendly {
-  background-color: #E0C9F0;
+  background-color: $yellow;
   width: auto;
   height: auto;
-  color: white;
-  font-family: 'Nunito', sans-serif;
+  color: $shadow;
+  font-family:  $altfont;
 
 }
 
 .your-friends {
   margin-bottom: 5vh;
   width: 100%;
+  background-color: $pink;
+  font-weight: bold;
 }
 
 .add-div {
@@ -122,16 +130,22 @@
 
 .friendnname {
   margin: 0;
+  font-family: $subfont;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .pending-div {
   margin-bottom: 7vh;
   background-color: white;
   border: #3a3a3a solid 2px;
-  box-shadow: 5px 5px #3a3a3a;
+  box-shadow: 6px 6px #3a3a3a;
   height: 100%;
-  padding: 12px;
+  padding: 0 !important;
   position: relative;
+  h3 {
+    padding: 10px;
+  }
 }
 
 .friend-vertical {
@@ -140,17 +154,22 @@
  position: relative;
  overflow-y: scroll;
  height: 40vh;
- width: 100%;
  margin-bottom: 2vh;
+ margin-left: 15px;
 }
 
 
 
 .group-vertical {
 overflow-y: scroll;
-
+margin-left: 15px;
 margin-bottom: 4vh;
 
+}
+
+.pg {
+  background-color: $yellow;
+  font-weight: bold;
 }
 
 .friend-side {
@@ -179,7 +198,8 @@ margin-bottom: 4vh;
 
 .groupnameh {
 margin-top: 2vh;
-color: $blue;
+color: $shadow;
+font-family: $subfont;
 }
 
 .friends-popup1 {
@@ -192,14 +212,28 @@ color: $blue;
   height: 25px;
 }
 
+.button-a {
+  background-color: $pink !important;
+}
+
 .yg {
   margin-bottom: 3vh;
+  background-color: $blue;
+  font-weight: bold;
 }
 
 .gb {
-  background-color: #E0C9F0;
+  background-color: $blue;
+  font-family: $altfont;
   width: auto;
   height: auto;
+  box-shadow: 3px 3px $shadow !important;
+  transition: box-shadow 0.3s ease;
+}
+
+.gb:hover {
+  box-shadow: none !important;
+  border: none;
 }
 
 .bin {
@@ -213,19 +247,55 @@ align-items: center;
   background-color: white;
   border: #3a3a3a solid 2px;
   box-shadow: 5px 5px #3a3a3a;
-  padding: 12px;
+  padding: 0 !important;
+  h3 {
+    padding: 10px;
+  }
 }
 
 .scrolly {
-  overflow-y: scroll;
   background-color: white;
   border: #3a3a3a solid 2px;
-  box-shadow: 5px 5px #3a3a3a;
-  padding: 12px;
-
+  box-shadow: 6px 6px #3a3a3a;
+  padding: 0 !important;
+  h3 {
+    padding: 10px;
+  }
 }
 
 .cg {
   margin-top: 7vh;
   margin-bottom: 7vh;
+}
+
+@media (min-width: 992px) {
+.col-lg-4 {
+    flex: 0 0 auto;
+    width: 32%;
+}
+}
+
+.row {
+  --bs-gutter-x: 0 !important;
+}
+
+.gbutton1 {
+  font-family:  $altfont !important;
+  border: 2px solid $shadow;
+  box-shadow: 3px 3px $shadow;
+  transition: box-shadow 0.3s ease;
+  background-color: $blue;
+  height: 40px;
+  font-weight: bold;
+}
+
+.gbutton1:hover {
+  border:none;
+  box-shadow: none;
+}
+
+
+.new_group {
+  margin: 0 0 15px 15px;
+  display: flex
 }
