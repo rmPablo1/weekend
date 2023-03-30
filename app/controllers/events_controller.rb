@@ -6,6 +6,7 @@ class EventsController < ApplicationController
   def create
     event = Event.new(set_params)
     event.user = current_user
+
     if event.save!
       params[:event][:user_id].each do |user_id|
         next if user_id == ""
@@ -13,10 +14,10 @@ class EventsController < ApplicationController
         event = Event.new(set_params)
         event.user = User.find(user_id)
         event.save
-        raise
       end
-      redirect_to dashboard_path
-    else
+
+      redirect_to controller: "dashboards", action: "dashboard", start_date: params[:event][:start_time].to_datetime
+        else
       render "new", status: :unprocessable_entity
     end
   end
