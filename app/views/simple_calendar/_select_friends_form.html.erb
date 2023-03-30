@@ -10,7 +10,7 @@
         name="friends[<%= friend.id %>]"
         class="input-friends"
         id="friends[<%= friend.id %>]"/>
-      <label for="friends[<%= friend.id %>]" <%= friend.full_name %>> <%= friend.full_name%></label></li>
+      <label for="friends[<%= friend.id %>]" <%= friend.full_name %>> <%= friend.full_name[0..10]%></label></li>
       <% end %>
     <% end %>
     <h4><strong>Groups</strong></h4>
