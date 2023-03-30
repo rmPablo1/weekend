@@ -12,12 +12,13 @@
   width: 35vw;
   height: 100vh;
   overflow: hidden;
+  border-right: 2px solid $shadow;
 }
 
 .circle {
   background-color: $yellow;
   border-radius: 100% !important;
-  color: white;
+  color: $shadow;
   width: 10vh;
   height: 10vh;
   position: absolute;
