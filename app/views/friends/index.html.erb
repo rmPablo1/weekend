@@ -7,25 +7,6 @@
   <div class="container-friend">
     <div class="row">
 
-    <div class="col-12 col-lg-4 ">
-
-      <div class="pending-div" >
-          <h3>Pending Requests</h3>
-          <% @friend_requests.each do |request|%>
-            <div><%= request.followerable.full_name %><button type="submit"><%= link_to("Accept", accept_request_path(request.followerable))%></button><button><%= link_to("Decline", friend_path(request.followerable), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" })%></button></div>
-          <% end %>
-          <%= button_to "Edit password", edit_user_password_path, class: "navbutton button friendly"%>
-          <% if current_user %>
-          <% end %>
-      </div>
-
-
-      </div>
-
-
-
-
-
     <div class="col-12 col-lg-4 scrolly">
       <h3 class="yg">Your Group's</h3>
       <div class="group-vertical" style="height: 40vh;">
@@ -46,7 +27,7 @@
               </div>
               <form action="/add" method="post">
                 <input type="hidden" id="group-id" name="group_id" value=<%=group.id%>>
-                <input type="text" placeholder="Add a friend" name="email">
+                <input type="text" placeholder=" Add a friend" name="email">
                 <input type="submit" class="button gb">
               </form>
 
@@ -69,7 +50,29 @@
         </div>
           <%= render "form" %>
       </div>
+    <div class="col-12 col-lg-4">
+
+      <div class="pending-div" >
+          <h3 class='pg'>Pending Requests</h3>
+          <% @friend_requests.each do |request|%>
+           <div><%= request.followerable.full_name %>
+           <%= link_to accept_request_path(request.followerable) do %>
+              <i class="fa-regular fa-check" style="color: #254274;"></i>
+            <% end %>
+            <%= link_to friend_path(request.followerable), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+              <i class="fa-solid fa-x" style="color: #183568;"></i>
+            <% end %>
+           </div>
+          <% end %>
+          <%= button_to "Edit password", edit_user_password_path, class: "navbutton button friendly"%>
+          <% if current_user %>
+          <% end %>
+
+      </div>
     </div>
+    </div>
+
+
   </div>
   <div class="container">
   <div class="row">

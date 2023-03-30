@@ -1,4 +1,4 @@
 <%= simple_form_for(@group) do |f| %>
-<%= f.input :name, class:"inputfriend" %>
-<%= f.submit %>
+<%= f.input :name, class:"inputfriend", label: false, placeholder: " Create a new group!" %>
+<%= f.submit class: "gbutton1" %>
 <% end %>

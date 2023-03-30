@@ -10,8 +10,9 @@ class EventsController < ApplicationController
 
         add_event_different_user(set_params, user_id)
       end
-      redirect_to dashboard_path
-    else
+
+      redirect_to controller: "dashboards", action: "dashboard", start_date: params[:event][:start_time].to_datetime
+        else
       render "new", status: :unprocessable_entity
     end
   end
